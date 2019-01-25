@@ -104,7 +104,7 @@ checked program was:
 
 have_header: checking for mysql.h... -------------------- yes
 
-"clang -E -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+"clang -E -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -116,7 +116,7 @@ checked program was:
 
 have_header: checking for errmsg.h... -------------------- yes
 
-"clang -E -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+"clang -E -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -128,7 +128,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -144,7 +144,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_PREFERRED in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -160,7 +160,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_REQUIRED in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -176,7 +176,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_CA in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -192,7 +192,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -208,7 +208,7 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -227,14 +227,14 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
-conftest.c:6:35: error: no member named 'pvio' in 'struct NET'; did you mean 'vio'?
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+conftest.c:6:35: error: no member named 'pvio' in 'struct st_net'; did you mean 'vio'?
 int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
                                   ^~~~
                                   vio
-/usr/local/Cellar/mysql/8.0.13/include/mysql/mysql_com.h:828:13: note: 'vio' declared here
-  MYSQL_VIO vio;
-            ^
+/usr/local/opt/mysql@5.7/include/mysql/mysql_com.h:333:8: note: 'vio' declared here
+  Vio *vio;
+       ^
 1 error generated.
 checked program was:
 /* begin */
@@ -254,7 +254,7 @@ checked program was:
 
 have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -270,7 +270,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -286,7 +286,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -302,7 +302,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_WAS_SLOW in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -318,7 +318,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -334,7 +334,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -348,13 +348,9 @@ checked program was:
 
 --------------------
 
-have_type: checking for my_bool in mysql.h... -------------------- no
+have_type: checking for my_bool in mysql.h... -------------------- yes
 
-"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
-conftest.c:6:9: error: unknown type name 'my_bool'
-typedef my_bool conftest_type;
-        ^
-1 error generated.
+"clang -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -368,7 +364,7 @@ checked program was:
 
 --------------------
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Weverything  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Weverything  "
 In file included from conftest.c:1:
 In file included from /Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby.h:33:
 In file included from /Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/ruby.h:24:
@@ -480,7 +476,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-bad-function-cast  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-bad-function-cast  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -488,7 +484,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-conditional-uninitialized  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-conditional-uninitialized  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -496,7 +492,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-covered-switch-default  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-covered-switch-default  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -504,7 +500,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-declaration-after-statement  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-declaration-after-statement  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -512,7 +508,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-disabled-macro-expansion  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-disabled-macro-expansion  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -520,7 +516,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-documentation-unknown-command  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-documentation-unknown-command  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -528,7 +524,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-missing-field-initializers  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-missing-field-initializers  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -536,7 +532,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-missing-variable-declarations  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-missing-variable-declarations  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -544,7 +540,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-padded  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-padded  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -552,7 +548,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-reserved-id-macro  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-reserved-id-macro  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -560,7 +556,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-sign-conversion  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-sign-conversion  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -568,7 +564,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-static-in-inline  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-static-in-inline  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -576,7 +572,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-switch-enum  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-switch-enum  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -584,7 +580,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-undef  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-undef  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -592,7 +588,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-unreachable-code  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-unreachable-code  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -600,7 +596,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-used-but-marked-unused  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc -Werror -Wno-used-but-marked-unused  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -608,7 +604,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/Cellar/mysql/8.0.13/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/Cellar/mysql/8.0.13/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc  -Wl,-rpath,/usr/local/Cellar/mysql/8.0.13/lib  "
+"clang -o conftest -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin16 -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/nkutl9up/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/usr/local/opt/mysql@5.7/include/mysql -I/Users/nkutl9up/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/nkutl9up/.rbenv/versions/2.6.0/lib -L/usr/local/opt/openssl/lib    -L/usr/local/opt/mysql@5.7/lib -lmysqlclient -lssl -lcrypto  -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc  -Wl,-rpath,/usr/local/opt/mysql@5.7/lib  "
 checked program was:
 /* begin */
 1: #include "ruby.h"
