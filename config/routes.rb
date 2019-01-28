@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'users/show'
   get '/signup', to: 'users#new'
   get 'users/edit'
+  resources :users
 end

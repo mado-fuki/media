@@ -1,0 +1,20 @@
+%nav.navbar.navbar-dark.navbar-expand-md.bg-primary.text-nowrap
+  .container
+    %a.navbar-brand{href: "#", style: "font-family: ABeeZee, sans-serif"}
+      %strong
+        Media-Sample
+    %button.navbar-toggler{"data-toggle" => "collapse", "data-target" => "#navcol-1"}
+      %span.sr-only
+        Toggle navigation
+      %span.navbar-toggler-icon
+    %div.collapse.navbar-collapse#navcol-1
+      %ul.nav.navbar-nav.ml-auto
+        %li.nav-item{role: "presentation"}
+          %a.nav-link.active{href: "#"}
+            First Item
+        %li.nav-item{role: "presentation"}
+          %a.nav-link{href: "#"}
+            Second Item
+        %li.nav-item{role: "presentation"}
+          %a.nav-link{href: "#"}
+            Third Item

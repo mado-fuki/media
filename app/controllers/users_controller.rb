@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @name = "test_user" + "2"
-    render html: @name
+    @user = User.find(params[:id])
   end
 
   def new
