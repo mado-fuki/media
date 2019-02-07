@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      Media
+      = full_title(yield(:title))
     %meta{name: "viewport", :content => {width: "device-width", "initial-scale" => "1.0", "shrink-to-fit" => "no"}}
     #{csrf_meta_tags}
     #{csp_meta_tag}

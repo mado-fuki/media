@@ -1,20 +1,36 @@
 %nav.navbar.navbar-dark.navbar-expand-md.bg-primary.text-nowrap
   .container
-    %a.navbar-brand{href: "#", style: "font-family: ABeeZee, sans-serif"}
+    %a.navbar-brand{href: '/', style: 'font-family: ABeeZee, sans-serif'}
       %strong
         Media-Sample
-    %button.navbar-toggler{"data-toggle" => "collapse", "data-target" => "#navcol-1"}
+    %button.navbar-toggler{'data-toggle' => 'collapse', 'data-target' => '#navcol-1'}
       %span.sr-only
         Toggle navigation
       %span.navbar-toggler-icon
     %div.collapse.navbar-collapse#navcol-1
       %ul.nav.navbar-nav.ml-auto
-        %li.nav-item{role: "presentation"}
-          %a.nav-link.active{href: "#"}
-            First Item
-        %li.nav-item{role: "presentation"}
-          %a.nav-link{href: "#"}
-            Second Item
-        %li.nav-item{role: "presentation"}
-          %a.nav-link{href: "#"}
-            Third Item
+        %li.nav-item{role: 'presentation'}
+          %a.nav-link.active{href: '#'}
+            Home
+        %li.nav-item{role: 'presentation'}
+          %a.nav-link{href: '#'}
+            Help
+        - if logged_in?
+          %li.nav-item{role: 'presentation'}
+            = link_to 'Users', '#', class: 'nav-link'
+          %li.dropdown
+            %a.dropdown-toggle{'href' => '#', 'data-toggle' => 'dropdown', 'class' => 'nav-link'}
+              Account 
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                = link_to 'Profile', current_user
+              %li
+                = link_to 'Settings', '#'
+              %li.divider
+              %li
+                = link_to 'Log out', logout_path, method: :delete    
+        - else
+          %li
+            = link_to 'Log in', login_path, class: 'nav-link'
+            
