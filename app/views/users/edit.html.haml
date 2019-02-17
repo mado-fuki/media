@@ -1,3 +1,6 @@
 = provide(:user, 'edit')
-%h1 Users#edit
-%p Find me in app/views/users/edit.html.haml
+= provide(:button_text, '更新')
+.login-card
+  %p
+    Edit profile
+    #{render 'form'}

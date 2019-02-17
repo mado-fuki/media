@@ -10,14 +10,12 @@
     %div.collapse.navbar-collapse#navcol-1
       %ul.nav.navbar-nav.ml-auto
         %li.nav-item{role: 'presentation'}
-          %a.nav-link.active{href: '#'}
-            Home
-        %li.nav-item{role: 'presentation'}
-          %a.nav-link{href: '#'}
-            Help
+          %a.nav-link.active{href: '/'}
+            ホーム
         - if logged_in?
           %li.nav-item{role: 'presentation'}
-            = link_to 'Users', '#', class: 'nav-link'
+            %a.nav-link{href: 'users'}
+              ユーザー一覧
           %li.dropdown
             %a.dropdown-toggle{'href' => '#', 'data-toggle' => 'dropdown', 'class' => 'nav-link'}
               Account 
@@ -26,7 +24,7 @@
               %li
                 = link_to 'Profile', current_user
               %li
-                = link_to 'Settings', '#'
+                = link_to 'Settings', edit_user_path(current_user)
               %li.divider
               %li
                 = link_to 'Log out', logout_path, method: :delete    

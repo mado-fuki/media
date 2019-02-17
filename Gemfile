@@ -17,9 +17,11 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'bootsnap', require: false
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'faker'
 end
 
 group :development do
@@ -27,6 +29,7 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
@@ -34,6 +37,8 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
