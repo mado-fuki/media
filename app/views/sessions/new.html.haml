@@ -6,11 +6,11 @@
       = f.text_field :email, {class: 'form-control', placeholder: 'メールアドレス'}
       = f.password_field :password, {class: 'form-control', placeholder: 'パスワード'}
       .form-check
-        = f.label :remember_me, {class: "form-check-label"} do
+        = f.label :remember_me, {class: 'form-check-label'} do
           = f.check_box :remember_me, {class: 'form-check-input', id: 'formCheck-1'}
           %span
             ログイン情報を保持する
       = f.submit 'ログイン', {class: 'btn btn-primary btn-block btn-lg btn-signin'}
-      %a.forgot-password{href: "#"}
+      %a.forgot-password{href: '#'}
         パスワードをお忘れですか?
       
