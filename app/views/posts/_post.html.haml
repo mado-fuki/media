@@ -1,0 +1,13 @@
+%li{id: "post-#{post.id}"}
+%div.title
+  = post.title
+%div.content
+  = post.content
+%div.user
+  = link_to post.user.name, post.user
+%div.timestamp
+  Posted#{time_ago_in_words(post.created_at)}ago.
+  - if current_user?(post.user)
+    %div
+      = link_to "削除", post, method: :delete,
+        data: { confirm: "削除します。よろしいですか?" }

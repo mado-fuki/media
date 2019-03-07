@@ -1,7 +1,11 @@
 = provide(:title, "Home")
 
-%a.nav-link{href: '/signup'}
-  %h1
-    sing in
-%p Find me in app/views/main/home.html.haml
+- if logged_in?
+  %a.nav-link{href: "/signup"}
+    %h1
+      sing in
 
+  %div.col-md-8
+    %p
+      Micropost Feed
+    = render "shared/feed"

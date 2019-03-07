@@ -17,6 +17,10 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'bootsnap', require: false
 gem 'kaminari'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'rmagick'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platform: :mri
