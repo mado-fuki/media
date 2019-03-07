@@ -1,7 +1,9 @@
 = form_for @user, :html => {:class => 'form-signin'} do |f|
-      = render 'shared/error_messages'
+      = render 'shared/error_messages', object: f.object
       = f.text_field :name, {class: 'form-control', placeholder: 'ユーザー名'}
       = f.text_field :email, {class: 'form-control', placeholder: 'メールアドレス'}
       = f.password_field :password, {class: 'form-control', placeholder: 'パスワード'}
       = f.password_field :password_confirmation, {class: 'form-control', placeholder: 'パスワード(確認)'}
       = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin'}
+      %div.picture
+      = f.file_field :avatar, accept: 'image/jpeg,image/gif,image/png' 

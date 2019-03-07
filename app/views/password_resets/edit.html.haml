@@ -3,7 +3,7 @@
   %p
     Forgot Password
     = form_for(@user, url: password_reset_path(params[:id]), :html => {:class => 'form-signin'}) do |f|
-      = render 'shared/error_messages'
+      = render 'shared/error_messages', object: f.object
       = hidden_field_tag :email, @user.email
       = f.password_field :password, {class: 'form-control', placeholder: 'パスワード'}
       = f.password_field :password_confirmation, {class: 'form-control', placeholder: 'パスワード'}

@@ -1,8 +1,19 @@
 = provide(:title, @user.name)
 = provide(:user, @user.name)
 %div
+  = image_tag @user.avatar.thumb.url if @user.avatar?
+%div
   %p
     = @user.name
 %div
   %p
     = @user.email
+%div.col-md-8
+  -if @user.posts.any?
+    %p
+      = @user.posts.count
+      %ol.posts
+        = render @posts
+      = paginate @posts
+  
+       
