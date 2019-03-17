@@ -1,8 +1,14 @@
 %li{id: "post-#{post.id}"}
 %div.title
-  = post.title
+  %a{href: "/posts/#{post.id}"}
+    = post.title
 %div.content
   = post.content
+%div
+  - if post.images[0].id?
+    - post.images.each do |i|
+      - if i.image?
+        = image_tag i.image.thumb.url
 %div.user
   = link_to post.user.name, post.user
 %div.timestamp

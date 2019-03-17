@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :password_resets, only: %i[new create edit update]
   resources :posts
+  # resources :posts do
+  #   resources :images, :only => [:destroy]
+  # end
 end
