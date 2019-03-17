@@ -4,4 +4,7 @@
     = f.text_area :title, placeholder: "Compose new post..."
   %div.field
     = f.text_area :content, placeholder: "Compose new post..."
+  = f.fields_for :images do |i|
+    %div.field
+      = i.file_field :image, multiple: true, type: 'file', name: "images[image][]"
   = f.submit "Post", class: "btn btn-primary"
