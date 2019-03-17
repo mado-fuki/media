@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i(index edit update delete)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
-  before_action :clean_s3, only: :destroy
 
   def index
     @users = User.page(params[:page]).per(20)
@@ -61,10 +60,5 @@ class UsersController < ApplicationController
     # 管理者かどうか確認
     def admin_user
       redirect_to(root_url) unless current_user.admin?
-    end
-
-    def clean_s3
-      avatar.remove!
-      avatar.thumb.remove!
     end
 end
