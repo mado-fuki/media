@@ -32,14 +32,31 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit_images
+    @post = Post.find(params[:id])
+  end
+
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(post_params)
+    if @post.update_attributes(title: post_params[:title], content: post_params[:content])
       flash[:success] = '記事を更新しました。'
       redirect_to @post
     else
       render 'edit'
     end
+  end
+
+  def update_images
+    @post = Post.find(params[:id])
+    Post.transaction do
+      @post.images.clear
+      @params = images_params
+      @params['image'].each do |i|
+        @image = @post.images.create!(image: i)
+      end
+    end
+    flash[:success] = '画像を更新しました。'
+    redirect_to @post
   end
 
   def destroy
@@ -52,6 +69,10 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :content, images_attributes: [:image])
+    end
+
+    def images_params
+      params.require(:images).permit(image: [])
     end
 
     def correct_user

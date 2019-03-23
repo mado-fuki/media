@@ -2,8 +2,8 @@
   - if @post.images[0].id?
     - @post.images.each do |i|
       = image_tag i.image.thumb.url if i.image?
-  = f.file_field :image, multiple: true, type: 'file', name: "images[image][]"
   = render 'shared/error_messages', object: f.object
+  = link_to '画像編集', "/posts/#{@post.id}/edit_images", class: 'nav-link'
   %div.field
     = f.text_area :title, placeholder: "Compose new post..."
   %div.field

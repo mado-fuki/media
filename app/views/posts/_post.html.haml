@@ -7,8 +7,7 @@
 %div
   - if post.images[0].id?
     - post.images.each do |i|
-      - if i.image?
-        = image_tag i.image.thumb.url
+      = image_tag i.image.thumb.url if i.image?
 %div.user
   = link_to post.user.name, post.user
 %div.timestamp
