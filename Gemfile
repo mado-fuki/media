@@ -21,6 +21,8 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'rmagick'
 gem 'figaro'
+gem 'activeadmin'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri

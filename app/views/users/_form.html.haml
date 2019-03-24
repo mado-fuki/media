@@ -4,6 +4,5 @@
       = f.text_field :email, {class: 'form-control', placeholder: 'メールアドレス'}
       = f.password_field :password, {class: 'form-control', placeholder: 'パスワード'}
       = f.password_field :password_confirmation, {class: 'form-control', placeholder: 'パスワード(確認)'}
-      = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin'}
-      %div.picture
       = f.file_field :avatar, accept: 'image/jpeg,image/gif,image/png'
+      = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin'}

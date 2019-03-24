@@ -27,3 +27,4 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(6)
   users.each { |user| user.posts.create!(title: title, content: content) }
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

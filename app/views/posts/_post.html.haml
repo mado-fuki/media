@@ -5,7 +5,7 @@
 %div.content
   = post.content
 %div
-  - if post.images[0].id?
+  - if !post.images.blank?
     - post.images.each do |i|
       = image_tag i.image.thumb.url if i.image?
 %div.user
