@@ -3,9 +3,6 @@
 %div
   = image_tag @user.avatar.thumb.url if @user.avatar?
 %div
-  = link_to "削除", method: :delete_img,
-    data: { confirm: "削除します。よろしいですか?" }
-%div
   %p
     = @user.name
 %div
