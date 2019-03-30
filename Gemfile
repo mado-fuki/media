@@ -12,7 +12,6 @@ gem 'sass-rails'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'compass-rails'
-gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'bootsnap', require: false

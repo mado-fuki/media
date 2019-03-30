@@ -1,18 +1,37 @@
-%li{id: "post-#{post.id}"}
-%div.title
-  %a{href: "/posts/#{post.id}"}
-    = post.title
-%div.content
-  = post.content
-%div
-  - if !post.images.blank?
-    - post.images.each do |i|
-      = image_tag i.image.thumb.url if i.image?
-%div.user
-  = link_to post.user.name, post.user
-%div.timestamp
-  Posted#{time_ago_in_words(post.created_at)}ago.
-  - if current_user?(post.user)
-    %div
-      = link_to "削除", post, method: :delete,
-        data: { confirm: "削除します。よろしいですか?" }
+-# %li{id: "post-#{post.id}"}
+-# %div.title
+-#   %a{href: "/posts/#{post.id}"}
+-#     = post.title
+-# %div.content
+-#   = post.content
+-# %div
+-#   - if !post.images.blank?
+-#     - post.images.each do |i|
+-#       = image_tag i.image.thumb.url if i.image?
+-# %div.user
+-#   = link_to post.user.name, post.user
+-# %div.timestamp
+-#   Posted#{time_ago_in_words(post.created_at)}ago.
+-#   - if current_user?(post.user)
+-#     %div
+-#       = link_to "削除", post, method: :delete,
+-#         data: { confirm: "削除します。よろしいですか?" }
+
+
+- if !post.images.blank?
+  .col-sm-6.col-md-4.col-lg-4
+    .gallery-item
+      .gallery-image
+        %a.gallery{href: "/posts/#{post.id}"}
+          = image_tag post.images[0].image.thumb.url, class: 'thumbnail'
+    .team-item.mb-4
+      .team-descr.font-alt
+        .team-name
+          %a{href: "/posts/#{post.id}"}
+            = post.title
+        .team-role
+          %a{href: "/users/#{post.user.id}"}
+            = post.user.name
+      -# - if current_user?(post.user)
+      -#   %div
+      -#     = link_to "削除", post, method: :delete, data: { confirm: "削除します。よろしいですか?" }

@@ -49,7 +49,9 @@ class PostsController < ApplicationController
   def update_images
     @post = Post.find(params[:id])
     Post.transaction do
-      @post.images.clear
+      @post.images.each do |i|
+        i.destroy!
+      end
       @params = images_params
       @params['image'].each do |i|
         @image = @post.images.create!(image: i)

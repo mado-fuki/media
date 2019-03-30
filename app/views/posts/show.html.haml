@@ -1,7 +1,39 @@
-= provide(:title, @post.title)
-= render @post
-%a{href: "/posts/#{@post.id}/edit"}
-  = '編集'
+-# = provide(:title, @post.title)
+-# - if !@post.images.blank?
+-#   .col-sm-6.col-md-4.col-lg-4
+-#     .gallery-item
+-#       .gallery-image
+-#         %a.gallery{href: "/posts/#{@post.id}"}
+-#           = image_tag @post.images[0].image.url
+-#     .team-item
+-#       .team-descr.font-alt
+-#         .team-name
+-#           %a{href: "/posts/#{@post.id}"}
+-#             = @post.title
+-#         .team-role
+-#           = @post.content
+-# %a{href: "/posts/#{@post.id}/edit"}
+-#   = '編集'
 
-  
-       
+.row
+  .col-sm-8.col-sm-offset-1
+    .post
+      .post-header.font-alt
+        %h1.post-title
+          = @post.title
+      .post-entry.mb-3
+        = @post.content
+  .col-sm-12.col-sm-offset-1
+  .col-sm-8.col-sm-offset-1
+    .post
+      .post-thumbnail
+        - if !@post.images.blank?
+          - @post.images.each do |i|
+            = image_tag i.image.url, class: 'mb-4'
+  .col-sm-4.col-md-3.col-md-offset-1.sidebar
+    .widget
+      = image_tag @post.user.avatar.thumb.url, class: 'rounded-circle'
+      %a.user-name{href: "/users/#{@post.user.id}"}
+        = @post.user.name
+      .btn.btn-success.btn-circle.btn-block.mt-3
+        フォローする
