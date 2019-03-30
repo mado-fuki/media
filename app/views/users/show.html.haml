@@ -1,19 +1,15 @@
 = provide(:title, @user.name)
 = provide(:user, @user.name)
 %div
-  = image_tag @user.avatar.thumb.url if @user.avatar?
+  = image_tag @user.avatar.thumb.url, class: 'rounded-circle' if @user.avatar?
 %div
   %p
     = @user.name
-%div
-  %p
-    = @user.email
-%div.col-md-8
-  -if @user.posts.any?
-    %p
-      = @user.posts.count
-      %ol.posts
+-if @user.posts.any?
+  %section.module
+    .container
+      .row.multi-columns-row
         = render @posts
-      = paginate @posts
+        = paginate @posts
   
        

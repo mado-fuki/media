@@ -1,4 +1,6 @@
 - if @feed_items.any?
-  %ol.posts
-    = render @feed_items
-  = paginate @feed_items
+  %section.module
+    .container
+      .row.multi-columns-row
+        = render @feed_items
+    = paginate @feed_items
