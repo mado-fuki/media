@@ -1,11 +1,11 @@
 = form_for(@post) do |f|
-  - if @post.images[0].id?
+  - if @post.images[0].blank?
     - @post.images.each do |i|
       = image_tag i.image.thumb.url if i.image?
-  = f.file_field :image, multiple: true, type: 'file', name: "images[image][]"
+  = f.file_field :image, {"multiple" => 'true', "type" => 'file', "name" => "images[image][]", "class" => 'validate[required]', "data-prompt-position" => 'topLeft'}
   = render 'shared/error_messages', object: f.object
   %div.field
-    = f.text_area :title, placeholder: "Compose new post..."
+    = f.text_area :title, placeholder: "タイトル", class: 'validate[required]'
   %div.field
-    = f.text_area :content, placeholder: "Compose new post..."
-  = f.submit "Post", class: "btn btn-primary"
+    = f.text_area :content, placeholder: "説明文", class: 'validate[required]'
+  = f.submit "投稿", class: "btn btn-primary", id: 'submit_btn'

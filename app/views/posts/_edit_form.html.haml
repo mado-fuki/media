@@ -9,3 +9,5 @@
   %div.field
     = f.text_area :content, placeholder: "Compose new post..."
   = f.submit "Post", class: "btn btn-primary"
+  %div
+    = link_to "削除", "/posts/#{@post.id}", method: :delete, data: { confirm: "削除します。よろしいですか?" }

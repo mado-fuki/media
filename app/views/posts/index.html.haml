@@ -1,0 +1,20 @@
+= provide(:title, '投稿一覧')
+%section.module
+  .container
+    .row.multi-columns-row
+      - @posts.each do |post|
+        - if !post.images.blank?
+          .col-sm-6.col-md-4.col-lg-4
+            .gallery-item
+              .gallery-image
+                %a.gallery{href: "/posts/#{post.id}"}
+                  = image_tag post.images[0].image.thumb.url, class: 'thumbnail'
+            .team-item.mb-4
+              .team-descr.font-alt
+                .team-name
+                  %a{href: "/posts/#{post.id}"}
+                    = post.title
+                .team-role
+                  %a{href: "/users/#{post.user.id}"}
+                    = post.user.name
+= paginate @posts
