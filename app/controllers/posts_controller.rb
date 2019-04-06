@@ -2,6 +2,10 @@ class PostsController < ApplicationController
   before_action :logged_in_user
   before_action :correct_user, only: :destroy
 
+  def index
+    @posts = Post.all.page(params[:page]).per(20)
+  end
+
   def show
     @post = Post.find(params[:id])
   end
@@ -14,14 +18,33 @@ class PostsController < ApplicationController
     end
   end
 
+  # def create
+  #   @post = current_user.posts.build(post_params)
+  #   if @post.save
+  #     params[:images]['image'].each do |i|
+  #       @image = @post.images.create!(image: i)
+  #     end
+  #     flash[:success] = '記事を投稿しました。'
+  #     redirect_to "/users/#{current_user.id}"
+
+  #   else
+  #     @feed_items = []
+  #     render 'new'
+  #   end
+  # end
+
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
       params[:images]['image'].each do |i|
         @image = @post.images.create!(image: i)
       end
-      flash[:success] = '記事を投稿しました。'
-      redirect_to root_url
+      unless @post.valid?(:created_post)
+        render 'new'
+      else
+        flash[:success] = '記事を投稿しました。'
+        redirect_to "/users/#{current_user.id}"
+      end
     else
       @feed_items = []
       render 'new'
@@ -64,7 +87,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     flash[:success] = '記事を削除しました。'
-    redirect_to request.referrer || root_url
+    redirect_to current_user
   end
 
   private
