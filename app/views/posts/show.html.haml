@@ -18,7 +18,7 @@
       = image_tag @post.user.avatar.thumb.url, class: 'rounded-circle'
       %a.user-name{href: "/users/#{@post.user.id}"}
         = @post.user.name
-      -if current_user.name == @post.user.name
+      -if current_user&.name == @post.user.name
         %a.btn.btn-success.btn-circle.btn-block.mt-3{href: "/posts/#{@post.id}/edit"}
           編集する
       - else

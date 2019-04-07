@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user
+  before_action :logged_in_user, only: [:create, :update, :destroy]
   before_action :correct_user, only: :destroy
 
   def index
@@ -17,21 +17,6 @@ class PostsController < ApplicationController
       @post.images.build
     end
   end
-
-  # def create
-  #   @post = current_user.posts.build(post_params)
-  #   if @post.save
-  #     params[:images]['image'].each do |i|
-  #       @image = @post.images.create!(image: i)
-  #     end
-  #     flash[:success] = '記事を投稿しました。'
-  #     redirect_to "/users/#{current_user.id}"
-
-  #   else
-  #     @feed_items = []
-  #     render 'new'
-  #   end
-  # end
 
   def create
     @post = current_user.posts.build(post_params)
