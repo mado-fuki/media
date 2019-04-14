@@ -46,6 +46,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   # リサイズの設定
   version :thumb do
-      process resize_to_fit: [150, 150]
+      process resize_to_fit: [350, 350]
   end
 end
