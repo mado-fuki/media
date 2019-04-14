@@ -144,6 +144,18 @@
   font-size: 1rem;
 }
 
+// utility
+.thumb-cercle {
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-size: cover;
+}
+
 //titan-cancellation
 .module {
   padding: 0 !important;

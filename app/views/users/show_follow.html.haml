@@ -1,0 +1,23 @@
+- provide(:title, @title)
+.row
+  %aside.col-md-4
+    %section.user_info
+      -if @user.avatar?
+        %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
+      %h1
+        = @user.name
+      %span
+        = link_to "view my profile", @user
+      %span
+        %b
+          Microposts:
+        = @user.posts.count
+    %section.stats
+      = render 'shared/follow_stats'
+  %div.col-md-8
+    %h3
+      = @title
+    - if @users.any?
+      %ul.users.follow
+        = render @users
+= paginate @users

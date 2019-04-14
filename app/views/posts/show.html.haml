@@ -15,12 +15,14 @@
             = image_tag i.image.url, class: 'mb-4'
   .col-sm-4.col-md-3.col-md-offset-1.sidebar
     .widget
-      = image_tag @post.user.avatar.thumb.url, class: 'rounded-circle'
+      - if @post.user.avatar?
+        %div{ style: "background-image: url(#{@post.user.avatar.thumb.url})", class: 'thumb-cercle' }
+      -else
+        = render 'shared/no_image'
       %a.user-name{href: "/users/#{@post.user.id}"}
         = @post.user.name
       -if current_user&.name == @post.user.name
         %a.btn.btn-success.btn-circle.btn-block.mt-3{href: "/posts/#{@post.id}/edit"}
           編集する
       - else
-        .btn.btn-success.btn-circle.btn-block.mt-3
-          フォローする
+        = render 'shared/follow_form'

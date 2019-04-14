@@ -1,11 +1,12 @@
 = provide(:title, @user.name)
 = provide(:user, @user.name)
-%div
-  = image_tag @user.avatar.thumb.url, class: 'rounded-circle' if @user.avatar?
-%div
-  %p
-    = @user.name
--if @user.posts.any?
+- if @user.avatar?
+  %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
+%p
+  = @user.name 
+%section.stats
+  = render 'shared/follow_stats'
+- if @user.posts.any?
   %section.module
     .container
       .row.multi-columns-row
