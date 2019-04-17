@@ -22,6 +22,7 @@ gem 'rmagick'
 gem 'figaro'
 gem 'activeadmin'
 gem 'devise'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
   gem 'byebug', platform: :mri
