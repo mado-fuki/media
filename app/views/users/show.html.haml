@@ -2,6 +2,8 @@
 = provide(:user, @user.name)
 - if @user.avatar?
   %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
+- else
+  = render 'shared/no_image'
 %p
   = @user.name 
 %section.stats

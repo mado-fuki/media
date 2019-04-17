@@ -1,7 +1,7 @@
--if user.avatar?
-  %div{ style: "background-image: url(#{user.avatar.thumb.url})", class: 'thumb-cercle' }
--else
-  = render 'shared/no_image'
-%div
-  %p
-    = user.name
+.mb-4.col-sm-6.col-md-3.col-lg-3
+  -if user.avatar?
+    %div{ style: "background-image: url(#{user.avatar.thumb.url})", class: 'thumb-cercle' }
+  -else
+    = render 'shared/no_image'
+  %div
+    = link_to "#{user.name}", "/users/#{@user.id}", class: 'mt-1 follow-user-name'
