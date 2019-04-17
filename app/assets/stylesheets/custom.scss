@@ -144,9 +144,32 @@
   font-size: 1rem;
 }
 
+//follow
+  .follow-user-name {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .follow-count {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 480px){
+    .follow-count {
+      font-size: 26px;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+  }
+
+//follow_stats
+  .follow_stats {
+    text-align: center;
+  }
+
 // utility
 .thumb-cercle {
-  display: inline-block;
   background-position: center center;
   background-repeat: no-repeat;
   width: 120px;
@@ -154,9 +177,15 @@
   border-radius: 50%;
   border: 1px solid #ccc;
   background-size: cover;
+  margin: 0 auto;
 }
 
 //titan-cancellation
+.user-name {
+  display: block;
+  text-align: center;
+}
+
 .module {
   padding: 0 !important;
 }

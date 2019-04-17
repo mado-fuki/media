@@ -1,23 +1,23 @@
 - provide(:title, @title)
 .row
-  %aside.col-md-4
+  %aside.col-md-3
     %section.user_info
       -if @user.avatar?
         %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
-      %h1
-        = @user.name
-      %span
-        = link_to "view my profile", @user
-      %span
-        %b
-          Microposts:
-        = @user.posts.count
-    %section.stats
-      = render 'shared/follow_stats'
-  %div.col-md-8
-    %h3
-      = @title
-    - if @users.any?
-      %ul.users.follow
+      - else
+        = render 'shared/no_image'
+      = link_to "#{@user.name}", "/users/#{@user.id}", class: 'user-name'
+      %section.follow_stats
+        = render 'shared/follow_stats'
+  .col-md-9
+    .follow-count.mb-4
+      -if controller.action_name.eql?('following')
+        フォロー中
+        = @user.following.count
+      - else
+        フォロワー
+        = @user.followers.count
+    .row
+      - if @users.any?
         = render @users
 = paginate @users
