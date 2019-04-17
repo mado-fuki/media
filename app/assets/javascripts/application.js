@@ -17,4 +17,5 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require_directory ./jQueryValidationEngine
+//= require bootstrap-tagsinput.min
 //= require_tree .

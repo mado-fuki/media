@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 30 }
   validates :content, presence: true, length: { maximum: 300 }
   validate :images_number, on: :created_post
+  acts_as_taggable
 
   private
 
