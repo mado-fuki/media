@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     @posts = Post.all.page(params[:page]).per(20)
   end
 
+  def search_tags
+    @search_posts = Post.tagged_with(params[:tag]).page(params[:page]).per(20)
+  end
+
   def show
     @post = Post.find(params[:id])
   end
@@ -74,6 +78,7 @@ class PostsController < ApplicationController
     flash[:success] = '記事を削除しました。'
     redirect_to current_user
   end
+  
 
   private
 

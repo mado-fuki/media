@@ -37,5 +37,9 @@
               サインイン
           %li
             = link_to 'ログイン', login_path, class: 'nav-link'
+        %li
+          = search_form_for @q, html: {class: 'mt-2'}, url: posts_path do |f|
+            = f.text_field :title, placeholder: '検索', value: @words
+            = f.submit 'Search'
           
             

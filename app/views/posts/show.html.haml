@@ -6,9 +6,7 @@
           = @post.title
       .post-entry.mb-3
         = @post.content
-      - @post.tag_list.each do |tag|
-        %span.label.label-primary
-          #{"#"+tag}
+      = create_tag_link(@post)
   .col-sm-12.col-sm-offset-1
   .col-sm-8.col-sm-offset-1
     .post
