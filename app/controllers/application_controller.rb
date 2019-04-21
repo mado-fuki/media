@@ -10,10 +10,9 @@ class ApplicationController < ActionController::Base
       words.split(/[ 　]/).each_with_index do |word, i|
         params[:q][:groupings][i] = { title_or_content_or_tags_name_cont: word }
       end
-      @words = words
     end
     @q = Post.ransack(params[:q])
-    @search_posts = @q.result(distinct: true).page(params[:page])
+    @search_posts = @q.result(distinct: true).page(params[:page]).per(20)
   end
 
   private

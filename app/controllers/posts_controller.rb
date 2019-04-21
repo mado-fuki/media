@@ -3,7 +3,13 @@ class PostsController < ApplicationController
   before_action :correct_user, only: :destroy
 
   def index
-    @posts = Post.all.page(params[:page]).per(20)
+    unless params[:q].nil?
+      words_array = []
+      for param in params[:q][:groupings] do
+        words_array.push(param[:title_or_content_or_tags_name_cont])
+      end
+      @words = words_array.join(' ')
+    end
   end
 
   def search_tags
