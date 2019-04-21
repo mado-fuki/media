@@ -22,4 +22,5 @@ Rails.application.routes.draw do
       patch :update_images
     end
   end
+  get 'tags/:tag', to: 'posts#search_tags', as: :tag
 end

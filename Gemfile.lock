@@ -383,6 +383,7 @@ DEPENDENCIES
   omniauth
   puma
   rails (= 5.2.2)
+  ransack
   rmagick
   rspec-rails
   sass-rails

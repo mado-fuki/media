@@ -23,6 +23,7 @@ gem 'figaro'
 gem 'activeadmin'
 gem 'devise'
 gem 'acts-as-taggable-on'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platform: :mri
