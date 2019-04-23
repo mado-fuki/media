@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     end
     @q = Post.ransack(params[:q])
     @search_posts = @q.result(distinct: true).page(params[:page]).per(20)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

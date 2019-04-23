@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :correct_user, only: :destroy
 
   def index
+    # ページがリロードされても検索ワードをformに保持する
     unless params[:q].nil?
       words_array = []
       for param in params[:q][:groupings] do
@@ -23,7 +24,6 @@ class PostsController < ApplicationController
   def new
     if logged_in?
       @post = current_user.posts.build
-      @feed_items = current_user.feed.page(params[:page]).per(20)
       @post.images.build
     end
   end
@@ -41,7 +41,6 @@ class PostsController < ApplicationController
         redirect_to "/users/#{current_user.id}"
       end
     else
-      @feed_items = []
       render 'new'
     end
   end
