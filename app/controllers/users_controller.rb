@@ -50,14 +50,21 @@ class UsersController < ApplicationController
     @title = "フォロー一覧"
     @user  = User.find(params[:id])
     @users = @user.following.page(params[:page]).per(20)
-    render 'show_follow'
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    # render 'show_follow'
   end
 
   def followers
     @title = "フォロワー一覧"
     @user  = User.find(params[:id])
     @users = @user.followers.page(params[:page]).per(20)
-    render 'show_follow'
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 

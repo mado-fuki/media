@@ -17,7 +17,7 @@
       - else
         フォロワー
         = @user.followers.count
-    .row
+    .row#users
       - if @users.any?
         = render @users
-= paginate @users
+= paginate @users, :remote => true

@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
     @post = Post.find(params[:post_id])
     current_user.follow(@user)
     respond_to do |format|
-      format.html { redirect_to '/posts/28' }
+      format.html { redirect_to @user }
       format.js
     end
   end
@@ -16,7 +16,7 @@ class RelationshipsController < ApplicationController
     @post = Post.find(params[:post_id])
     current_user.unfollow(@user)
     respond_to do |format|
-      format.html { redirect_to '/posts/28' }
+      format.html { redirect_to @user }
       format.js
     end
   end

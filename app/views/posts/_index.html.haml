@@ -17,4 +17,4 @@
                 .team-role
                   %a{href: "/users/#{post.user.id}"}
                     = post.user.name
-= paginate @search_posts
+= paginate @search_posts, :remote => true
