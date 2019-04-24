@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     # ページがリロードされても検索ワードをformに保持する
-    unless params[:q].nil?
+    unless params[:q].blank?
       words_array = []
       for param in params[:q][:groupings] do
         words_array.push(param[:title_or_content_or_tags_name_cont])
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def search_tags
-    @search_posts = Post.tagged_with(params[:tag]).page(params[:page]).per(20)
+    @search_posts = Post.tagged_with(params[:tag]).page(params[:page]).per(21)
   end
 
   def show
