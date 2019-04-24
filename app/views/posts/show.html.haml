@@ -22,8 +22,9 @@
         = render 'shared/no_image'
       %a.user-name{href: "/users/#{@post.user.id}"}
         = @post.user.name
-      -if current_user&.name == @post.user.name
-        %a.btn.btn-success.btn-circle.btn-block.mt-3{href: "/posts/#{@post.id}/edit"}
-          編集する
-      - else
-        = render 'shared/follow_form'
+      - if logged_in?
+        -if current_user&.name == @post.user.name
+          %a.btn.btn-success.btn-circle.btn-block.mt-3{href: "/posts/#{@post.id}/edit"}
+            編集する
+        - else
+          = render 'shared/follow_form'
