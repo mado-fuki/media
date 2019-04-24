@@ -13,9 +13,7 @@
 //= require jquery.min.js
 //= require rails-ujs
 //= require activestorage
-//= require jquery
 //= require bootstrap
-//= require jquery_ujs
 //= require_directory ./jQueryValidationEngine
 //= require bootstrap-tagsinput.min
 //= require_tree .

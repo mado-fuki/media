@@ -9,10 +9,6 @@
       %span.navbar-toggler-icon
     %div.collapse.navbar-collapse#navcol-1
       %ul.nav.navbar-nav.ml-auto
-        %li
-          = search_form_for @q, html: {class: 'mt-2'}, url: posts_path do |f|
-            = f.text_field :title, placeholder: '検索', value: @words
-            = f.submit 'Search'
         - if logged_in?
           %li.nav-item{role: 'presentation'}
             %a.nav-link{href: "/posts/new"}
@@ -35,5 +31,10 @@
               サインイン
           %li
             = link_to 'ログイン', login_path, class: 'nav-link'
-          
+        %li.search-box.mt-2
+          = search_form_for @q, url: posts_path do |f|
+            = f.text_field :title, placeholder: '検索', value: @words
+            = button_tag class: 'search-btn' do
+              %i.fa.fa-search
+  
             

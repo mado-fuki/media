@@ -1,9 +1,59 @@
-
+/* navber */
 .navbar {
   margin-bottom: 40px;
 }
 
-//login-form
+.dropdown-menu {
+  position: absolute;
+  top: 67px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.15);
+}
+
+
+.dropdown-menu li a{
+  padding: 12px 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .dropdown-menu {
+    background-color: #1a1a1a;
+    border: none;
+  }
+
+  .dropdown-menu li a{
+    color: #fff;
+  }
+}
+
+/* search box */
+
+.search-box input {
+  height: 32px;
+  width: 190px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: #d4d9df;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width : 768px) {
+  .search-box {
+    margin-left: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-box input {
+    width: 92%;
+  }
+}
+
+/* login-form */
 .login-card {
   max-width: 350px;
   padding: 40px 40px;
@@ -90,7 +140,7 @@
 }
 
 
-// forms
+/* forms  */
 #error_explanation {
   color: red;
   ul {
@@ -105,7 +155,7 @@
   }
 }
 
-// loginform
+/* loginform  */
 .login-card {
   p{
     text-align: center;
@@ -124,7 +174,7 @@
   border-radius: 4px;
 }
 
-// posts 
+/* posts  */
 .module {
   padding: 0px;
 }
@@ -135,7 +185,7 @@
   max-height: 380px;
 }
 
-// post show
+/* post show  */
 .post-title {
   text-transform: none;
 }
@@ -144,7 +194,7 @@
   font-size: 1rem;
 }
 
-//follow
+/* follow  */
   .follow-user-name {
     display: block;
     text-align: center;
@@ -163,12 +213,13 @@
     }
   }
 
-//follow_stats
+/* follow_stats  */
   .follow_stats {
     text-align: center;
   }
 
-// utility
+
+/* utility  */
 .thumb-cercle {
   background-position: center center;
   background-repeat: no-repeat;
@@ -180,7 +231,7 @@
   margin: 0 auto;
 }
 
-//titan-cancellation
+/* titan-cancellation  */
 .user-name {
   display: block;
   text-align: center;
