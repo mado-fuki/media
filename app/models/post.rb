@@ -13,6 +13,6 @@ class Post < ApplicationRecord
 
     def images_number
       errors.add(:images, "を1枚以上指定して下さい") if images.size < 1
-      errors.add(:images, "は8枚までです") if images.size > 8
+      errors.add(:images, "は6枚までです") if images.size > 6
     end
 end

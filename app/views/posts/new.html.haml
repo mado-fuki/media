@@ -1,6 +1,5 @@
+= provide(:post, 'edit')
+= provide(:button_text, '投稿')
 %div.row
-  %aside.col-md-4
-    %section.user_info
-      = render 'shared/user_info'
-      %section.micropost_form
-        = render 'form'
+  %section.micropost_form.col-md-12
+    = render 'form'
