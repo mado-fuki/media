@@ -10,12 +10,8 @@ $(function(){
 
       reader.onload = (function(file) {
         return function(e) {
-          $preview.append($('<img>').attr({
-            src: e.target.result,
-            width: "100%",
-            class: "preview",
-            title: file.name
-          }));
+          var preview_item = $('<div class="preview_item">').css('background', 'transparent url('+e.target.result +')').append($('<div class="file-name">' + file.name + '</div>'));
+          $preview.append(preview_item)
         };
       })(file);
       reader.readAsDataURL(file);
