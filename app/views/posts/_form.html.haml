@@ -1,15 +1,25 @@
 = form_for(@post) do |f|
   = render 'shared/error_messages', object: f.object
-  = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-file-select mb-3', onclick: "$('#file').click()"
+  = button_tag 'ファイルを選択', type: 'button', class: 'validate[required] btn btn-file-select mb-3', onclick: "$('#file').click()"
   = f.file_field :image, {multiple: 'true', type: 'file', name: "images[image][]", class: 'validate[required]', id: 'file', "data-prompt-position" => 'topLeft'}
-  - if @post.images[0].blank?
-    - @post.images.each do |i|
-      = image_tag i.image.thumb.url if i.image.thumb.url?
   #img_field.mb-3
+  .field.mb-3
+    .annotation
+      %span.annotation-red
+        *必須
+      32文字以内
+    = f.text_area :title, placeholder: "タイトル", class: 'validate[required,maxSize[30]]', id: 'title'
+    #title_error_message.text_error_message
   .field
-    = f.text_area :title, placeholder: "タイトル", class: 'validate[required,maxSize[30]] mb-2'
-  .field
-    = f.text_area :content, placeholder: "説明文", class: 'validate[required,maxSize[300]] caption-field mb-2'
-  .form-group
-    = f.text_field :tag_list, placeholder: "タグ", value: @post.tag_list.join(','), "data-role" => "tagsinput"
+    .annotation
+      %span.annotation-red
+        *必須
+      300文字以内
+    = f.text_area :content, placeholder: "説明文", class: 'validate[required,maxSize[300]] caption-field', id: 'content'
+    #content_error_message.text_error_message
+  .field.mb-3
+    .form-group
+    .annotation
+      *任意
+    = f.text_field :tag_list, placeholder: "タグ", value: @post.tag_list.join(','), "data-role" => "tagsinput", class: 'validate[required,maxSize[10]]'
   = f.submit yield(:button_text), class: "btn btn-primary", id: 'submit_btn'

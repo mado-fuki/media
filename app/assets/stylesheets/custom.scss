@@ -246,12 +246,18 @@
   height: 120px;
 }
 
-.field textarea{
+.field {
   width: 60%;
+  margin: 0 auto;
+}
+
+.field textarea{
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   display: inline-block;
+  margin-top: 3px;
   padding: 4px 6px;
   color: #555;
   vertical-align: middle;
@@ -261,8 +267,22 @@
   cursor: text;
 }
 
-.bootstrap-tagsinput{
+.annotation {
+  text-align: left;
+}
+
+.annotation-red {
+  color: red;
+}
+
+.text_error_message {
   width: 60%;
+  color: red;
+  text-align: left;
+}
+
+.bootstrap-tagsinput{
+  width: 100%;
 }
 
 .bootstrap-tagsinput input{
@@ -274,8 +294,12 @@
 }
 
 @media screen and (max-width: 480px){
-  .field textarea {
+  .field {
     width: 100% !important;
+  }
+
+  #title_error_message {
+    width: 100%;
   }
 
   .bootstrap-tagsinput{
@@ -327,6 +351,10 @@
   border: 1px solid #ccc;
   background-size: cover;
   margin: 0 auto;
+}
+
+.valid-error-input {
+  border: solid red 1px !important;
 }
 
 /* titan-cancellation  */

@@ -1,8 +1,15 @@
 = form_for(@post,url: {action: "update_images" }) do |f|
   = render 'shared/error_messages', object: f.object
-  - if @post.images[0].id?
-    - @post.images.each do |i|
-      = image_tag i.image.thumb.url if i.image?
-  %div.field
-    = f.file_field :image, multiple: true, type: 'file', name: "images[image][]"
-  = f.submit "Post", class: "btn btn-primary"
+  = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-file-select mb-3', onclick: "$('#file').click()"
+  = f.file_field :image, {multiple: 'true', type: 'file', name: "images[image][]", class: 'validate[required]', id: 'file', "data-prompt-position" => 'topLeft'}
+  #img_field.mb-3
+  = f.submit yield(:button_text), class: "btn btn-primary"
+
+-# = form_for(@post,url: {action: "update_images" }) do |f|
+-#   = render 'shared/error_messages', object: f.object
+-#   - if @post.images[0].id?
+-#     - @post.images.each do |i|
+-#       = image_tag i.image.thumb.url if i.image?
+-#   %div.field
+-#     = f.file_field :image, multiple: true, type: 'file', name: "images[image][]"
+-#   = f.submit yield(:button_text), class: "btn btn-primary"
