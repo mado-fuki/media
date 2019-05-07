@@ -1,0 +1,10 @@
+= button_tag 'ファイルを選択', type: 'button', class: 'btn btn-file-select mb-3', onclick: "$('#file').click()"
+= f.file_field :image, {multiple: 'true', type: 'file', accept: 'image/jpeg,image/png,image/gif', name: "images[image][]", id: 'file'}
+#img_field
+#img_field_error_message.text-red.mb-2
+.annotation.images-annotation.mb-3
+  %span.text-red
+    *必須<br>
+  JPEG GIF PING<br>
+  1枚32MB以内<br>
+  最大6枚までアップロードできます。

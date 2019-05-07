@@ -1,0 +1,19 @@
+.field.mb-3
+  .annotation
+    %span.text-red
+      *必須
+    32文字以内
+  = f.text_area :title, placeholder: "タイトル", id: title_id
+  #title_error_message.text_error_message
+.field
+  .annotation
+    %span.text-red
+      *必須
+    300文字以内
+  = f.text_area :content, placeholder: "説明文", class: 'caption-field', id: content_id
+  #content_error_message.text_error_message
+.field.mb-3
+  .form-group
+  .annotation
+    *任意
+  = f.text_field :tag_list, placeholder: "タグ", value: @post.tag_list.join(','), id: 'tags_field', "data-role" => "tagsinput"
