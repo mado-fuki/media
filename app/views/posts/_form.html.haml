@@ -1,5 +1,5 @@
 = form_for(@post) do |f|
   = render 'shared/error_messages', object: f.object
-  = render 'images_form', { f: f }
+  = render 'images_form', { f: f, images_field_class: 'images_field'}
   = render 'text_form', { f: f, title_id: 'title', content_id: 'content' }
   = f.button yield(:button_text), class: "btn btn-primary", id: 'submit_btn'

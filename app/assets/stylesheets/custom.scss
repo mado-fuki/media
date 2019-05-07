@@ -179,9 +179,6 @@
 }
 
 /* posts form */
-#file {
-  display: none;
-}
 
 .micropost_form {
   text-align: center;
@@ -195,6 +192,10 @@
   width: 300px;
   height: 60px;
   font-size: 1rem;
+}
+
+#file {
+  display: none;
 }
 
 #img_field {

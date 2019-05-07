@@ -1,6 +1,7 @@
 let title_valid = false;
 let content_valid = false;
 let images_valid = false;
+let edit_images_valid = false;
 const FILE_SIZE_LIMIT = 33554432;
 
 $(function() {
@@ -11,42 +12,43 @@ $(function() {
 
   $('#submit_btn').prop('disabled', true);
 
+  images_preview('.images_field');
+  images_preview('.edit_images_field');
+  flag_check();
+
   if ($('#edit_title').val().length > 0 && $('#edit_title').val().length <= 32) {
     title_valid = true;
   }
   if ($('#edit_content').val().length > 0 && $('#edit_content').val().length <= 300) {
     content_valid = true;
   }
-  edit_flag_check();
+  edit_text_flag_check();
+
+  $('#title').on('keyup change', function() {
+    title_form_add_error_message($('#title'));
+    flag_check();
+  });
+  
+  $('#content').on('keyup change', function() {
+    content_form_add_error_message($('#content'));
+    flag_check();
+  });
   
 
   $('#edit_title').on('keyup change', function() {
     title_form_add_error_message($('#edit_title'));
-    edit_flag_check();
+    edit_text_flag_check();
   });
   
   $('#edit_content').on('keyup change', function() {
     content_form_add_error_message($('#edit_content'));
-    edit_flag_check();
+    edit_text_flag_check();
   });
 });
 
-images_preview();
-flag_check();
-
-$('#title').on('keyup change', function() {
-  title_form_add_error_message($('#title'));
-  flag_check();
-});
-
-$('#content').on('keyup change', function() {
-  content_form_add_error_message($('#content'));
-  flag_check();
-});
-
 // 選択された画像をプレビュー
-function images_preview() {
-  $('#file').on('change', $('#file'), function(e) {
+function images_preview(field) {
+  $(field).on('change', $(field), function(e) {
     $preview = $('#img_field');
     $preview.empty();
     $('#img_field_error_message').text('');
@@ -72,6 +74,7 @@ function images_preview() {
             }
             file_error_flag_check(file_error_flag);
             flag_check();
+            edit_images_flag_check();
             $preview.append(preview_item);
           };
         })(file);
@@ -80,6 +83,7 @@ function images_preview() {
     }
     file_error_flag_check(file_error_flag);
     flag_check();
+    edit_images_flag_check();
   });
 }
 
@@ -125,8 +129,10 @@ function content_form_add_error_message(content) {
 function file_error_flag_check(file_error_flag) {
   if(file_error_flag == true) {
       images_valid = true;
+      edit_images_valid = true;
     } else {
       images_valid = false;
+      edit_images_valid = false;
     }
 }
 
@@ -140,8 +146,16 @@ function flag_check() {
 }
 
 // posts/id/editの全てのフォームが有効ならsubmitボタンを有効にする
-function edit_flag_check() {
+function edit_text_flag_check() {
   if(title_valid == true && content_valid == true) {
+    $('#submit_btn').prop('disabled', false);
+  } else {
+    $('#submit_btn').prop('disabled', true);
+  }
+}
+
+function edit_images_flag_check() {
+  if(edit_images_valid == true) {
     $('#submit_btn').prop('disabled', false);
   } else {
     $('#submit_btn').prop('disabled', true);
