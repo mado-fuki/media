@@ -14,24 +14,24 @@ class ImageUploader < CarrierWave::Uploader::Base
     end
   end
 
-  # Choose what kind of storage to use for this uploader:
   # ストレージの設定(S3アップロード用にfogを指定)
   storage :fog
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
   # アップロード先のディレクトリの設定
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # Add a white list of extensions which are allowed to be uploaded.
   # 許可するファイル拡張子の設定
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w(jpg jpeg ping gif)
   end
 
-  # Override the filename of the uploaded files:
+  # ファイルサイズ上限の設定
+  def size_range
+    1..32.megabytes
+  end
+
   # ファイル名の設定(ランダムな16進数文字列をファイル名の先頭に付与)
   def filename
      "#{secure_token(10)}.#{file.extension}" if original_filename.present?
@@ -43,7 +43,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.hex(length/2))
   end
 
-  # Create different versions of your uploaded files:
   # リサイズの設定
   version :thumb do
       process resize_to_fit: [853, 480]

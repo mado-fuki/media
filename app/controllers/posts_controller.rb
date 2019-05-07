@@ -30,18 +30,17 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    if @post.save
+    if params[:images]['image'].length > 6
+      @post.errors.add(:images, "は6枚までです。")
+      render 'new' and return
+    elsif @post.save
       params[:images]['image'].each do |i|
         @image = @post.images.create!(image: i)
       end
-      unless @post.valid?(:created_post)
-        render 'new'
-      else
-        flash[:success] = '記事を投稿しました。'
-        redirect_to "/users/#{current_user.id}"
-      end
+      flash[:success] = '記事を投稿しました。'
+      redirect_to "/users/#{current_user.id}"
     else
-      render 'new'
+      render 'new' and return
     end
   end
 
@@ -55,7 +54,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(title: post_params[:title], content: post_params[:content])
+    if @post.update_attributes(title: post_params[:title], content: post_params[:content], tag_list: post_params[:tag_list])
       flash[:success] = '記事を更新しました。'
       redirect_to @post
     else
