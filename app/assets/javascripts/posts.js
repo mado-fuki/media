@@ -16,13 +16,15 @@ $(function() {
   images_preview('.edit_images_field');
   flag_check();
 
-  if ($('#edit_title').val().length > 0 && $('#edit_title').val().length <= 32) {
-    title_valid = true;
+  if(document.getElementById("edit_title") != null) {
+    if ($('#edit_title').val().length > 0 && $('#edit_title').val().length <= 32) {
+      title_valid = true;
+    }
+    if ($('#edit_content').val().length > 0 && $('#edit_content').val().length <= 300) {
+      content_valid = true;
+    }
+    edit_text_flag_check();
   }
-  if ($('#edit_content').val().length > 0 && $('#edit_content').val().length <= 300) {
-    content_valid = true;
-  }
-  edit_text_flag_check();
 
   $('#title').on('keyup change', function() {
     title_form_add_error_message($('#title'));
