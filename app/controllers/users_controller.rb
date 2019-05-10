@@ -30,11 +30,25 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit_avatar
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = 'プロフィールを更新しました。'
       redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  def update_avatar
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = 'プロフィール画像を更新しました。'
+      redirect_to "/users/#{current_user.id}/edit_avatar"
     else
       render 'edit'
     end
