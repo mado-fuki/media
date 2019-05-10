@@ -1,0 +1,19 @@
+= provide(:user, 'アバター編集')
+= provide(:button_text, '更新')
+%div.row
+  %section.micropost_form.col-md-12
+    - if @user.avatar?
+      %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
+    -else
+      = render 'shared/no_image'
+    = form_for(@user,url: {action: "update_avatar" }) do |f|
+      = render 'shared/error_messages', object: f.object
+      = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-avater-file-select mt-3 mb-3', onclick: "$('#file').click()"
+      = f.file_field :avatar, accept: 'image/jpeg,image/png,image/gif',id: 'file',class: 'mt-4 mb-2'
+      #avater_field
+      #avater_field_error_message.text-red.mb-2
+      .annotation.images-annotation.mb-3
+        *任意<br>
+        JPEG GIF PING<br>
+        32MB以内<br>
+      = f.submit yield(:button_text), class: "btn btn-primary", id: 'avater_submit_btn'
