@@ -8,10 +8,10 @@
       = render 'shared/no_image'
     = form_for(@user,url: {action: "update_avatar" }) do |f|
       = render 'shared/error_messages', object: f.object
-      = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-avater-file-select mt-3 mb-3', onclick: "$('#file').click()"
-      = f.file_field :avatar, accept: 'image/jpeg,image/png,image/gif',id: 'file',class: 'mt-4 mb-2'
-      #avater_field
-      #avater_field_error_message.text-red.mb-2
+      = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-avater-file-select mt-3 mb-3', onclick: "$('#edit_avater_file_field').click()"
+      = f.file_field :avatar, accept: 'image/jpeg,image/png,image/gif',id: 'edit_avater_file_field',class: 'mt-4 mb-2'
+      #edit_avatar_message
+      #edit_avatar_error_message.text-red.mb-2
       .annotation.images-annotation.mb-3
         *任意<br>
         JPEG GIF PING<br>

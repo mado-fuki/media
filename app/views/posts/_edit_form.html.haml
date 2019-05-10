@@ -1,11 +1,11 @@
 = form_for(@post) do |f|
   = render 'shared/error_messages', object: f.object
-  #img_field.mb-3
+  #images_preview_field.mb-3
     - if @post.images[0].id?
       - @post.images.each do |i|
         .preview_item{ style: 'background-image: url(' + i.image.thumb.url + ')' }
     = link_to '画像を投稿し直す', "/posts/#{@post.id}/edit_images", class: 'nav-link edit-images-link'
   = render 'text_form', { f: f, title_id: 'edit_title', content_id: 'edit_content'}
-  = f.button yield(:button_text), class: "btn btn-primary", id: 'submit_btn'
+  = f.button yield(:button_text), class: "btn btn-primary", id: 'images_submit_btn'
   %div
     = link_to "削除", "/posts/#{@post.id}", method: :delete, data: { confirm: "削除します。よろしいですか?" }
