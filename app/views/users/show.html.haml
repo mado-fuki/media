@@ -1,14 +1,21 @@
 = provide(:title, @user.name)
 = provide(:user, @user.name)
-- if @user.avatar?
-  %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
-- else
-  = render 'shared/no_image'
-%p
-  = @user.name 
-%section.stats
-  = render 'shared/follow_stats'
+.row.multi-columns-row.mb-5
+  .col-sm-6.col-md-4.col-lg-3
+    - if @user.avatar?
+      %div{ style: "background-image: url(#{@user.avatar.thumb.url})", class: 'thumb-cercle' }
+    - else
+      = render 'shared/no_image'
+    %span.user-name.mt-1
+      = @user.name 
+    %section.follow_stats
+      = render 'shared/follow_stats'
+  .col-sm-6.col-md-4.col-lg-9.profile-edit-btn-wrapper
+    %a.btn.btn-primary.btn-circle.profile-edit-btn{href: "/users/#{@user.id}/edit"}
+      プロフィールを編集
 - if @user.posts.any?
+  .user-posts-list-text.mb-3
+    投稿作品一覧
   %section.module
     .container
       .row.multi-columns-row

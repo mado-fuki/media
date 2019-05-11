@@ -165,6 +165,26 @@
   border-radius: 4px;
 }
 
+/* users */
+.follow_stats {
+  text-align: center;
+}
+
+.user-posts-list-text {
+  font-size: 18px;
+}
+
+.profile-edit-btn-wrapper {
+  text-align: right;
+}
+
+@media screen and (max-width: 480px){
+  .profile-edit-btn-wrapper {
+    text-align: center;
+    margin-top: 22px;
+  }
+}
+
 /* users edit  */
 
 .btn-avater-file-select {
