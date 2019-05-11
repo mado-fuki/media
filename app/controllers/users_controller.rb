@@ -68,7 +68,7 @@ class UsersController < ApplicationController
       format.html
       format.js
     end
-    # render 'show_follow'
+    render 'show_follow'
   end
 
   def followers

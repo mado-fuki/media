@@ -5,5 +5,14 @@ ja:
     attributes:
       post:
         title: タイトル
-        content: 説明文
+        content: キャプション
         images: 画像
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認用)
+        avatar: プロフィール画像

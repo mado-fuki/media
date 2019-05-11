@@ -5,8 +5,8 @@
     %div
       入力されているテストユーザーの情報でログインしていただけます。
     = form_for(:session, url: login_path, :html => {:id => 'user_form', :class => 'form-signin'}) do |f|
-      = f.text_field :email, {class: 'form-control validate[required] custom[email]', placeholder: 'メールアドレス', value: 'test@example.com'}
-      = f.password_field :password, {class: 'form-control validate[required]', placeholder: 'パスワード', value: 'password'}
+      = f.text_field :email, {class: 'form-control validate[required,maxSize[256]] custom[email]', placeholder: 'メールアドレス', value: 'test@example.com'}
+      = f.password_field :password, {class: 'form-control validate[required,minSize[8],maxSize[8]]', placeholder: 'パスワード', value: 'password'}
       .form-check
         = f.label :remember_me, {class: 'form-check-label'} do
           = f.check_box :remember_me, {class: 'form-check-input', id: 'formCheck-1'}
