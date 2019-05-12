@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.page(params[:page]).per(21)
+    @posts = @user.posts.page(params[:page]).per(15)
   end
 
   def new
@@ -68,7 +68,6 @@ class UsersController < ApplicationController
       format.html
       format.js
     end
-    render 'show_follow'
   end
 
   def followers

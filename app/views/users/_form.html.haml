@@ -11,4 +11,4 @@
   = f.text_field :email, {class: 'form-control validate[required,maxSize[256]] custom[email]', placeholder: 'メールアドレス', value: 'new@example.com'}
   = f.password_field :password, {id: 'password', class: 'form-control validate[required,maxSize[8]]', placeholder: 'パスワード' , value: 'password'}
   = f.password_field :password_confirmation, {class: 'form-control validate[required,minSize[8],maxSize[8]] equals[password]', placeholder: 'パスワード(確認)' ,value: 'password'}
-  = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin'}
+  = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin allow_submit'}

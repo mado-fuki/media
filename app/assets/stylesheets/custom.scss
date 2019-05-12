@@ -178,6 +178,15 @@
   text-align: right;
 }
 
+.profile-edit-btn {
+  background-color: #dcdcdc;
+  color: #696969;
+}
+
+.profile-edit-btn:hover{
+  background-color: #c0c0c0;
+}
+
 @media screen and (max-width: 480px){
   .profile-edit-btn-wrapper {
     text-align: center;
@@ -205,6 +214,11 @@
   display: block;
   margin: 0 auto;
   max-height: 380px;
+}
+
+/* posts index */
+.post-index-title {
+  font-size: 18px;
 }
 
 /* posts form */

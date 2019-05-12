@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def search_tags
-    @search_posts = Post.tagged_with(params[:tag]).page(params[:page]).per(21)
+    @search_posts = Post.tagged_with(params[:tag]).page(params[:page]).per(15)
   end
 
   def show

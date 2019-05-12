@@ -5,8 +5,12 @@ let edit_images_valid = false;
 const IMAGE_FILE_SIZE_LIMIT = 33554432;
 
 $(function() {
+
   $submit_btn = $('#images_submit_btn');
+  $edit_images_submit_btn = $('#edit_images_submit_btn');
+  
   $submit_btn.prop('disabled', true);
+  $edit_images_submit_btn.prop('disabled', true);
 
   images_preview('.images_field');
   images_preview('.edit_images_field');
@@ -149,16 +153,16 @@ function flag_check() {
 // posts/id/editの全てのフォームが有効ならsubmitボタンを有効にする
 function edit_text_flag_check() {
   if(title_valid == true && content_valid == true) {
-    $submit_btn.prop('disabled', false);
+    $edit_images_submit_btn.prop('disabled', false);
   } else {
-    $submit_btn.prop('disabled', true);
+    $edit_images_submit_btn.prop('disabled', true);
   }
 }
 
 function edit_images_flag_check() {
   if(edit_images_valid == true) {
-    $submit_btn.prop('disabled', false);
+    $edit_images_submit_btn.prop('disabled', false);
   } else {
-    $submit_btn.prop('disabled', true);
+    $edit_images_submit_btn.prop('disabled', true);
   }
 }

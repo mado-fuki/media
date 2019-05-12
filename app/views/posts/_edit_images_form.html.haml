@@ -1,4 +1,4 @@
 = form_for(@post,url: {action: "update_images" }) do |f|
   = render 'shared/error_messages', object: f.object
   = render 'images_form', { f: f, images_field_class: 'edit_images_field'}
-  = f.submit yield(:button_text), class: "btn btn-primary", id: 'images_submit_btn'
+  = f.submit yield(:button_text), class: "btn btn-success", id: 'edit_images_submit_btn'
