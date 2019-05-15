@@ -134,6 +134,8 @@
 
 .login-card .forgot-password {
   color: rgb(104, 145, 162);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .login-card .forgot-password:hover, .login-card .forgot-password:active, .login-card .forgot-password:focus {
@@ -310,6 +312,7 @@
 
 .annotation {
   text-align: left;
+  margin-bottom: 2px;
 }
 
 .images-annotation {

@@ -15,7 +15,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
            format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 8, maximum: 8 },allow_nil: true
+  validates :password, presence: true, length: { minimum: 6, maximum: 12 },allow_nil: true
   has_secure_password
 
   # 渡された文字列のハッシュ値を返す

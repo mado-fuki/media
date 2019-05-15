@@ -1,7 +1,10 @@
 = provide(:title, "パスワードリセット")
 .login-card
   %p
-    Forgot Password
-    = form_for(:password_reset, url: password_resets_path, :html => {:class => 'form-signin'}) do |f|
-      = f.text_field :email, {class: 'form-control', placeholder: 'メールアドレス'}
-      = f.submit '送信', {class: 'btn btn-primary btn-block btn-lg btn-signin'}
+    パスワード再設定
+  .mb-2
+    メールアドレスを入力してください。<br>
+    パスワード再設定用のメールを送信します。
+  = form_for(:password_reset, url: password_resets_path, :html => {:id => 'password_reset_form', :class => 'form-signin'}) do |f|
+    = f.text_field :email, {class: 'form-control validate[required,maxSize[256]] custom[email]', placeholder: 'メールアドレス'}
+    = f.submit '送信', {class: 'btn btn-primary btn-block btn-lg btn-signin'}
