@@ -9,9 +9,9 @@
       = link_to 'アバター画像を編集', "/users/#{@user.id}/edit_avatar"
   .annotation
     ユーザー名 12文字以下
-  = f.text_field :name, {class: 'form-control validate[required,maxSize[12]]', placeholder: 'ユーザー名', value: 'newユーザー' }
+  = f.text_field :name, {class: 'form-control validate[required,maxSize[12]]', placeholder: 'ユーザー名' }
   .annotation
     メールアドレス
-  = f.text_field :email, {class: 'form-control validate[required,maxSize[256]] custom[email]', placeholder: 'メールアドレス', value: 'new@example.com'}
+  = f.text_field :email, {class: 'form-control validate[required,maxSize[256]] custom[email]', placeholder: 'メールアドレス' }
   = render 'password_form', {f: f}
   = f.submit yield(:button_text), {class: 'btn btn-primary btn-block btn-lg btn-signin allow_submit'}
