@@ -20,6 +20,16 @@ RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by :selenium_chrome_headless
   end
+
+  # Capybaraに設定したドライバーの設定
+  Capybara.register_driver :selenium_chrome do |app|
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('headless') # ヘッドレスモードをonにするオプション
+    options.add_argument('--disable-gpu') # 暫定的に必要なフラグとのこと
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  end
+
+Capybara.javascript_driver = :selenium_chrome
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -99,4 +109,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  config.include Capybara::DSL
 end
