@@ -29,8 +29,8 @@ describe 'User pages' do
       end
     end
 
-    describe "失敗時のエラーメッセージ", :js => true do
-      context "after submission" do
+    describe "失敗時のエラーメッセージ" do
+      context "after submission", js: true do
         before { click_button submit }
         
         it 'aa' do

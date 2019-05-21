@@ -25,6 +25,7 @@ gem 'devise'
 gem 'acts-as-taggable-on'
 gem 'ransack'
 gem 'rails-i18n'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri
