@@ -25,11 +25,11 @@ RSpec.configure do |config|
   Capybara.register_driver :selenium_chrome do |app|
     options = Selenium::WebDriver::Chrome::Options.new
     options.add_argument('headless') # ヘッドレスモードをonにするオプション
-    options.add_argument('--disable-gpu') # 暫定的に必要なフラグとのこと
+    options.add_argument('--disable-gpu') # 暫定的に必要なフラグ
     Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
   end
 
-Capybara.javascript_driver = :selenium_chrome
+  Capybara.javascript_driver = :selenium_chrome
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
