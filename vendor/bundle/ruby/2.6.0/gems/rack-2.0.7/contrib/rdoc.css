@@ -158,7 +158,7 @@ ul.link-list li {
 }
 ul.link-list .type {
   font-size: 8px;
-  text-transform: uppercase;
+ text-transform: uppercase;
   color: white;
   background: #969696;
 }
@@ -340,7 +340,7 @@ ul.link-list .type {
 }
 #documentation .attribute-access-type {
   font-size: 60%;
-  text-transform: uppercase;
+ text-transform: uppercase;
   vertical-align: super;
 }
 

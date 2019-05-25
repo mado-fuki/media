@@ -14,7 +14,7 @@
             %a.nav-link{href: "/posts/new"}
               投稿
           %li.dropdown
-            %a.dropdown-toggle{'href' => '#', 'data-toggle' => 'dropdown', 'class' => 'nav-link'}
+            %a#navbar-user-toggle.dropdown-toggle{'href' => '#', 'data-toggle' => 'dropdown', 'class' => 'nav-link'}
               = current_user.name
               %b.caret
             %ul.dropdown-menu

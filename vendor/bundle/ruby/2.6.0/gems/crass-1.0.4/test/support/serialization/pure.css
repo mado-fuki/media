@@ -1501,7 +1501,7 @@ this the same font stack that Normalize.css sets for the `body`.
 /* HEADINGS */
 .pure-menu .pure-menu-heading {
     color: #565d64;
-    text-transform: uppercase;
+   text-transform: uppercase;
     font-size: 90%;
     margin-top: 0.5em;
     border-bottom-width: 1px;
