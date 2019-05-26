@@ -1,22 +1,19 @@
-require 'spec_helper'
+# require 'spec_helper'
 
-describe 'ログアウト', type: :system, js: true do
-  subject { page }
-  before do
-    @user = FactoryBot.create(:user)
-    visit login_path
-    fill_in 'session_email', with: @user.email
-    fill_in 'session_password', with: @user.password
-    click_button 'ログイン'
-    click_link 'navbar-user-toggle'
-    click_link 'ログアウト'
-  end
+# describe 'ログアウト', type: :system, js: true do
+#   subject { page }
+#   before do
+#     @user = FactoryBot.create(:user)
+#     sing_in @user
+#     click_link 'navbar-user-toggle'
+#     click_link 'ログアウト'
+#   end
 
-  it 'ログインページに遷移すること' do
-    is_expected.to have_title('ログイン')
-  end
+#   it 'ログインページに遷移すること' do
+#     is_expected.to have_title('ログイン')
+#   end
 
-  it 'ヘッダーにログアウトリンクが表示されること' do
-    is_expected.to have_content('nav-link', 'ログイン')
-  end
-end
+#   it 'ヘッダーにログアウトリンクが表示されること' do
+#     is_expected.to have_content('nav-link', 'ログイン')
+#   end
+# end
