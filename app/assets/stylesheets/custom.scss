@@ -360,6 +360,50 @@
   font-size: 1rem;
 }
 
+@media screen and (max-width: 480px){
+  .like_form {
+    float: right;
+  }
+}
+
+.like_count_balloon {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 80px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  text-align: center;
+  background: #FFF;
+  border: solid 3px #555;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.like_count_balloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.like_count_balloon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
 /* follow  */
   .follow-user-name {
     display: block;

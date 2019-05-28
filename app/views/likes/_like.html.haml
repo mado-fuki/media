@@ -1,0 +1,14 @@
+- if !current_user?(post.user)
+  - if post.like?(current_user)
+    = form_for(post.likes.find_by(user_id: current_user.id), html: { method: :delete }, remote: true) do |f|
+      = button_tag(class: "btn btn-circle profile-edit-btn") do
+        = content_tag :span, 'いいね!済み'
+      .like_count_balloon
+        = post.likes_count
+  - else
+    = form_for(post.likes.build, remote: true) do |f|
+      = hidden_field_tag :post_id, post.id
+      = button_tag(class: "btn btn-circle btn-success") do
+        = content_tag :span, '+いいね!'
+      .like_count_balloon
+        = post.likes_count
