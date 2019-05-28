@@ -26,6 +26,7 @@ gem 'acts-as-taggable-on'
 gem 'ransack'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
+gem 'counter_culture'
 
 group :development, :test do
   gem 'byebug', platform: :mri

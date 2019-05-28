@@ -58,6 +58,9 @@ GEM
       activerecord (~> 5.0)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    after_commit_action (1.1.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
@@ -116,6 +119,10 @@ GEM
       sass-rails (< 5.1)
       sprockets (< 4.0)
     concurrent-ruby (1.1.5)
+    counter_culture (2.2.2)
+      activerecord (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      after_commit_action (~> 1.0)
     crass (1.0.4)
     database_cleaner (1.7.0)
     devise (4.6.2)
@@ -381,6 +388,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails
   compass-rails
+  counter_culture
   database_cleaner
   devise
   factory_bot_rails
