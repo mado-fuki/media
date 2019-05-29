@@ -360,6 +360,12 @@
   font-size: 1rem;
 }
 
+.current-user-like-btn {
+  background-color: #eb6ea0;
+  color: #fff;
+  cursor: default !important;
+}
+
 @media screen and (max-width: 480px){
   .like_form {
     float: right;
