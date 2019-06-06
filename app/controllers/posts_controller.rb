@@ -5,11 +5,13 @@ class PostsController < ApplicationController
   def index
     # ページがリロードされても検索ワードをformに保持する
     unless params[:q].blank?
-      words_array = []
-      for param in params[:q][:groupings] do
-        words_array.push(param[:title_or_content_or_tags_name_cont])
+      unless params[:q][:groupings].blank?
+        words_array = []
+        for param in params[:q][:groupings] do
+          words_array.push(param[:title_or_content_or_tags_name_cont])
+        end
+        @words = words_array.join(' ')
       end
-      @words = words_array.join(' ')
     end
   end
 
