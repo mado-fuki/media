@@ -11,8 +11,9 @@
     %section.follow_stats
       = render 'shared/follow_stats'
   .col-sm-6.col-md-4.col-lg-9.profile-edit-btn-wrapper
-    %a.btn.btn-circle.profile-edit-btn{href: "/users/#{@user.id}/edit"}
-      プロフィールを編集
+    - if current_user?(@user)
+      %a.btn.btn-circle.profile-edit-btn{href: "/users/#{@user.id}/edit"}
+        プロフィールを編集
 - if @user.posts.any?
   .user-posts-list-text.mb-3
     投稿作品一覧
