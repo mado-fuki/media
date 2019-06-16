@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.0'
+ruby '2.5.3'
 gem 'rails', '5.2.2'
 gem 'bcrypt'
 gem 'puma'
@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'haml-rails'
 gem 'bootstrap' 
 gem 'sass-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '4.3.3'
 gem 'omniauth'
 gem 'compass-rails'
 gem 'uglifier'
@@ -42,7 +42,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '3.23.0'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
