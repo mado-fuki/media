@@ -19,3 +19,4 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 ADD . $APP_HOME
 
+CMD ["rails", "s", "-b", "0.0.0.0"]
