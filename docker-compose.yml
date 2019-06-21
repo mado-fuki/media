@@ -4,10 +4,12 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: Sita2ra#
+      MYSQL_ROOT_PASSWORD: <%= Settings[:db][:password] %>
       MYSQL_DATABASE: root
     ports:
       - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
   web:
     build: .
     ports:
@@ -15,8 +17,10 @@ services:
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/app_name
+      - bundle:/usr/local/bundle
     links:
       - db
 volumes:
-  bundle:
   mysql_data:
+  bundle:
+  
