@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     machine:
       image: circleci/classic:edge
     steps:
@@ -15,50 +15,49 @@ jobs:
           name: sleep for waiting launch db
           command: sleep 1
       - run:
-          name: rails db:create and db:migrate
+          name: "before_test: setup db"
           command: docker-compose run web rails db:create db:migrate
       - run:
-          name: rspec
+          name: test
           command: docker-compose run web rspec
       - run:
           name: docker-compose down
           command: docker-compose down
-
   deploy:
-    working_directory: ~/deploy
     machine:
       image: circleci/classic:edge
     steps:
       - checkout
+      # see: https://devcenter.heroku.com/articles/container-registry-and-runtime#using-a-ci-cd-platform
       - run:
-          name: Build docker image
-          command: docker build --rm=false -t registry.heroku.com/evening-escarpment-49697/web .
+          name: "build docker image"
+          command: docker build --rm=false -t registry.heroku.com/${HEROKU_APP_NAME}/web .
       - run:
-          name: Setup Heroku command
+          name: setup heroku command
           command: bash .circleci/setup_heroku.sh
       - run:
-          name: Execute Heroku maintenance on
-          command: heroku maintenance:on --app evening-escarpment-49697
+          name: heroku maintenance on
+          command: heroku maintenance:on --app ${HEROKU_APP_NAME}
       - run:
-          name: Push container to registry.heroku.com
-          command:
-            docker login --username=_ --password=<%= Settings[:heroku][:auth-token] %> registry.heroku.com
-            docker push registry.heroku.com/evening-escarpment-49697/web
+          name: "push container to registry.heroku.com"
+          command: |
+            docker login --username=_ --password=$HEROKU_AUTH_TOKEN registry.heroku.com
+            docker push registry.heroku.com/${HEROKU_APP_NAME}/web
+            bash .circleci/heroku-container-release.sh
       - run:
-          name: Execute Heroku db migrate
-          command: heroku run rails db:migrate --app evening-escarpment-49697
+          name: heroku db migrate
+          command: heroku run rails db:migrate --app ${HEROKU_APP_NAME}
       - run:
-          name: Execut Heroku maintenance off
-          command: heroku maintenance:off --app evening-escarpment-49697
-
+          name: heroku maintenance off
+          command: heroku maintenance:off --app ${HEROKU_APP_NAME}
 workflows:
   version: 2
-  test-deploy:
+  build_and_deploy:
     jobs:
-      - test
+      - build
       - deploy:
           requires:
-            - test
+            - build
           filters:
             branches:
               only: master
