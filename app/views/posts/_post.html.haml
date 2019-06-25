@@ -11,7 +11,11 @@
             = post.title
         .team-role
           - if current_page?("/users/#{post.user.id}")
-            = link_to "編集", "/posts/#{post.id}/edit"
+            - if current_user?(post.user)
+              = link_to "編集", "/posts/#{post.id}/edit"
           - else
             %a{href: "/users/#{post.user.id}"}
               = post.user.name
+        .index-likes-count
+          %i.fa.fa-heart
+          = post.likes_count

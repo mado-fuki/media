@@ -16,4 +16,7 @@
                 .team-role
                   %a{href: "/users/#{post.user.id}"}
                     = post.user.name
+                .index-likes-count
+                  %i.fa.fa-heart
+                  = post.likes_count
 = paginate @search_posts, :remote => true
