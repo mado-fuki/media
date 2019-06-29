@@ -24,12 +24,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # 許可するファイル拡張子の設定
   def extension_whitelist
-    %w(jpg jpeg gif png)
-  end
-
-  # 許可するファイル拡張子の設定
-  def extension_whitelist
-    %w(jpg jpeg ping gif)
+    %w(jpg jpeg png gif)
   end
 
   # ファイルサイズ上限の設定
