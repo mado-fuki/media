@@ -27,7 +27,6 @@
 /config/master.key
 
 /config/application.yml
-/circleci/setup_heroku.sh
 
 config/settings.local.yml
 config/settings/*.local.yml
