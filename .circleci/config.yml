@@ -6,9 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Decode dotenv file
-          command: echo $ENV_FILE | base64 --decode > .env
-      - run:
           name: docker-compose build
           command: docker-compose build
       - run:
