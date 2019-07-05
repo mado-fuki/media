@@ -1,3 +1,12 @@
+machine:
+  ruby:
+    version: 2.5.3
 database:
   override:
     - echo "No database setup required..."
+dependencies:
+  post:
+    - cd spec/rails_app && bundle install
+test:
+  override:
+    - bundle exec rspec spec
