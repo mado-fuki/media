@@ -15,6 +15,11 @@ jobs:
           name: docker-compose build
           command: docker-compose build
       - run:
+          name: install dependencies
+          command: |
+            gem update --system
+            gem install bundler
+      - run:
           name: docker-compose up
           command: docker-compose up -d
       - run:
