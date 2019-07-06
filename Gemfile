@@ -28,7 +28,6 @@ gem 'font-awesome-sass'
 gem 'counter_culture'
 gem 'config'
 gem 'dotenv-rails'
-gem 'thread_safe'
 
 group :development, :test do
   gem 'byebug', platform: :mri

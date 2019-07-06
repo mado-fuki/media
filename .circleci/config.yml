@@ -23,6 +23,7 @@ jobs:
             gem install concurrent-ruby --version=1.1.5
             gem install i18n --version=1.6.0
             gem install minitest --version=5.11.3
+            gem install thread_safe --version=0.3.6
             
       - run:
           name: docker-compose up
