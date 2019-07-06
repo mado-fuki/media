@@ -1,4 +1,4 @@
-FROM ruby:2.6.2
+FROM ruby:2.5.3
 
 ENV LANG C.UTF-8
 
@@ -7,7 +7,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update -q
     nodejs \
  && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler -v 1.17.3
+RUN gem install bundler
 
 WORKDIR /tmp
 ADD Gemfile Gemfile
