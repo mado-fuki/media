@@ -19,6 +19,7 @@ jobs:
           command: |
             gem update --system
             gem install bundler
+            gem install rake --version=12.3.2
       - run:
           name: docker-compose up
           command: docker-compose up -d
@@ -30,7 +31,7 @@ jobs:
           command: docker-compose run web rails db:create db:migrate
       - run:
           name: test
-          command: bundle exec rake rspec
+          command: bundle exec rspec
       - run:
           name: docker-compose down
           command: docker-compose down
