@@ -7,7 +7,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update -q
     nodejs \
  && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler
+RUN gem install bundler -v 1.17.3
 
 WORKDIR /tmp
 ADD Gemfile Gemfile
