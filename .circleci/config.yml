@@ -25,6 +25,8 @@ jobs:
             gem install minitest --version=5.11.3
             gem install thread_safe --version=0.3.6
             gem install tzinfo --version=1.2.5
+            gem install activesupport --version=5.2.2
+            
       - run:
           name: docker-compose up
           command: docker-compose up -d
