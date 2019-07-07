@@ -13,7 +13,7 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 ADD Gemfile /$APP_HOME/Gemfile
 ADD Gemfile.lock /$APP_HOME/Gemfile.lock
-RUN bundle install
+RUN bundle install --path vendor/bundle
 COPY . /$APP_HOME
 
 CMD ["rails", "s", "-b", "0.0.0.0"]
