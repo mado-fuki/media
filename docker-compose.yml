@@ -19,7 +19,6 @@ services:
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/usr/src/app
-      - bundle:/usr/local/bundle
     links:
       - db
 volumes:
