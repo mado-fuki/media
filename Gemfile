@@ -31,6 +31,7 @@ gem 'config'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'capybara', '3.23.0'
   gem 'byebug', platform: :mri
   gem 'faker'
 end
@@ -44,7 +45,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '3.23.0'
   gem 'database_cleaner'
   gem 'webdrivers'
   gem 'launchy'
