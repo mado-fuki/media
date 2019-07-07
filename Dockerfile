@@ -13,9 +13,9 @@ ENV APP_HOME /usr/src/app
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
-ADD . $APP_HOME
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
+ADD Gemfile /$APP_HOME/Gemfile
+ADD Gemfile.lock /$APP_HOME/Gemfile.lock
 RUN bundle install
+COPY . /$APP_HOME
 
 CMD ["rails", "s", "-b", "0.0.0.0"]
