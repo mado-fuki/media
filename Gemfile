@@ -29,6 +29,8 @@ gem 'counter_culture'
 gem 'config'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   gem 'byebug', platform: :mri
   gem 'faker'
 end
@@ -43,8 +45,6 @@ end
 
 group :test do
   gem 'capybara', '3.23.0'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'webdrivers'
   gem 'launchy'
