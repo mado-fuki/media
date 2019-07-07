@@ -25,7 +25,7 @@ jobs:
           command: docker-compose run web rails db:create db:migrate
       - run:
           name: test
-          command: bundle exec rspec
+          command: DISABLE_SPRING=true bundle exec rspec
       - run:
           name: docker-compose down
           command: docker-compose down
