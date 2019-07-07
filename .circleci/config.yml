@@ -15,9 +15,6 @@ jobs:
           name: docker-compose build 
           command: docker-compose build
       - run:
-          name: install dependencies
-          command: Bundle updated
-      - run:
           name: docker-compose up
           command: docker-compose up -d
       - run:
