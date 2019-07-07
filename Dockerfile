@@ -7,8 +7,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update -q
     nodejs \
  && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler
-
 ENV APP_HOME /usr/src/app
 
 RUN mkdir -p $APP_HOME
