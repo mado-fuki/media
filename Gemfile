@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'ruby', '2.6.2'
 gem 'rails', '5.2.2'
 gem 'bcrypt'
 gem 'puma'
@@ -26,8 +27,6 @@ gem 'ransack'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
 gem 'counter_culture'
-gem 'config'
-gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
