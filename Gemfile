@@ -26,6 +26,7 @@ gem 'ransack'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
 gem 'counter_culture'
+gem 'config'
 
 group :development, :test do
   gem 'byebug', platform: :mri

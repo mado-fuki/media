@@ -15,6 +15,25 @@ jobs:
           name: docker-compose build
           command: docker-compose build
       - run:
+          name: install dependencies
+          command: |
+            gem update --system
+            gem install bundler
+            gem install rake --version=12.3.2
+            gem install concurrent-ruby --version=1.1.5
+            gem install i18n --version=1.6.0
+            gem install minitest --version=5.11.3
+            gem install thread_safe --version=0.3.6
+            gem install tzinfo --version=1.2.5
+            gem install activesupport --version=5.2.2
+            gem install builder --version=3.2.3
+            gem install erubi --version=1.8.0 
+            gem install mini_portile2 --version=2.4.0
+            gem install nokogiri --version=1.10.3
+            gem install rails-dom-testing --version=2.0.3
+            gem install crass --version=1.0.4
+
+      - run:
           name: docker-compose up
           command: docker-compose up -d
       - run:
