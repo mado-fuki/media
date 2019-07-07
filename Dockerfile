@@ -12,7 +12,7 @@ RUN gem install bundler
 WORKDIR /tmp
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
-RUN bundle install
+RUN bundle install --binstubs
 
 ENV APP_HOME /usr/src/app
 RUN mkdir -p $APP_HOME
