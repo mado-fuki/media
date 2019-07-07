@@ -12,7 +12,7 @@ RUN gem install bundler -v 1.17.3
 WORKDIR /tmp
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
-RUN bundle install
+RUN bundle install --path vendor/cache
 
 ENV APP_HOME /usr/src/app
 RUN mkdir -p $APP_HOME
