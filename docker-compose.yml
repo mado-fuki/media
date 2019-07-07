@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   db:
     image: mysql:5.7
@@ -23,4 +22,3 @@ services:
       - db
 volumes:
   mysql_data:
-  bundle:
