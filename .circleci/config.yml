@@ -29,6 +29,7 @@ jobs:
             gem install builder --version=3.2.3
             gem install erubi --version=1.8.0 
             gem install mini_portile2 --version=2.4.0
+            gem install nokogiri --version=1.10.3
 
       - run:
           name: docker-compose up
