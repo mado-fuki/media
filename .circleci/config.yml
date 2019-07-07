@@ -35,6 +35,7 @@ jobs:
             gem install loofah --version=2.2.3
             gem install rails-html-sanitizer --version=1.0.4 
             gem install actionview --version=5.2.2
+            gem install rack --version=2.0.7
 
       - run:
           name: docker-compose up
