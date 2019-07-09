@@ -22,7 +22,7 @@ services:
       - db
       - chrome
   chrome:
-    image: selenium/standalone-chrome:4.0.0
+    image: selenium/standalone-chrome:3.13.1-dubnium
     ports:
       - 4444:4444
 volumes:
