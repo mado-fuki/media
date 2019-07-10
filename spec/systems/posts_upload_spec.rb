@@ -37,24 +37,24 @@ describe '記事アップロード', type: :system, js: true do
         it { is_expected.to have_content(content_error_message, '1文字以上入力してください。') }
       end
 
-      context '画像が6枚より多く選択された場合' do
-        before do
-          attach_file(
-            'images_file_field',
-            [
-              img_folder_path + 'image_1.jpg',
-              img_folder_path + 'image_2.jpg',
-              img_folder_path + 'image_3.jpg',
-              img_folder_path + 'image_4.jpg',
-              img_folder_path + 'image_5.jpg',
-              img_folder_path + 'image_6.jpg',
-              img_folder_path + 'image_7.jpg'
-            ],
-            make_visible: true, multiple: true
-          )
-        end
-        it { is_expected.to have_content(images_preview_error_message, '画像は６枚までです。') }
-      end
+      # context '画像が6枚より多く選択された場合' do
+      #   before do
+      #     attach_file(
+      #       'images_file_field',
+      #       [
+      #         img_folder_path + 'image_1.jpg',
+      #         img_folder_path + 'image_2.jpg',
+      #         img_folder_path + 'image_3.jpg',
+      #         img_folder_path + 'image_4.jpg',
+      #         img_folder_path + 'image_5.jpg',
+      #         img_folder_path + 'image_6.jpg',
+      #         img_folder_path + 'image_7.jpg'
+      #       ],
+      #       make_visible: true, multiple: true
+      #     )
+      #   end
+      #   it { is_expected.to have_content(images_preview_error_message, '画像は６枚までです。') }
+      # end
     end
 
     describe "投稿ボタンが非活性であること" do
@@ -75,7 +75,7 @@ describe '記事アップロード', type: :system, js: true do
           attach_file(
             'images_file_field',
             img_folder_path + 'image_1.jpg',
-            make_visible: true, multiple: true
+            make_visible: true
           )
           fill_in 'content', with: 'a'
         end
@@ -87,7 +87,7 @@ describe '記事アップロード', type: :system, js: true do
           attach_file(
             'images_file_field',
             img_folder_path + 'image_1.jpg',
-            make_visible: true, multiple: true
+            make_visible: true
           )
           fill_in 'title', with: 'a'
         end
@@ -108,15 +108,8 @@ describe '記事アップロード', type: :system, js: true do
       find('.btn-file-select').click
       attach_file(
         'images_file_field',
-        [
-          img_folder_path + 'image_1.jpg',
-          img_folder_path + 'image_2.jpg',
-          img_folder_path + 'image_3.jpg',
-          img_folder_path + 'image_4.jpg',
-          img_folder_path + 'image_5.jpg',
-          img_folder_path + 'image_6.jpg'
-        ],
-        make_visible: true, multiple: true
+        img_folder_path + 'image_1.jpg',
+        make_visible: true
       )
       fill_in 'title', with: 'テスト投稿'
       fill_in 'content', with: 'テスト用の投稿です。'
