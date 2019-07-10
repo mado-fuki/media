@@ -2,7 +2,7 @@
   マウスドラッグまたはCtl(Command)キーで複数選択可能<br>
   最大6枚までアップロードできます。
 = button_tag 'ファイルを選択', type: 'button', class: 'btn btn-file-select mb-3', onclick: "$('#images_file_field').click()"
-= f.file_field :image, {multiple: 'true', type: 'file', accept: 'image/jpeg,image/png,image/gif', name: "images[image][]", class: images_field_class, id: 'images_file_field'}
+= f.file_field :image, {type: 'file', accept: 'image/jpeg,image/png,image/gif', name: "images[image][]", class: images_field_class, id: 'images_file_field'}
 #images_preview_field
 #images_preview_error_message.text-red.mb-2
 .annotation.images-annotation.mb-3
