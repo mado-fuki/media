@@ -1,22 +1,19 @@
-FROM ruby:2.5.3
-
-ENV LANG C.UTF-8
-
+FROM ruby:2.6.2
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update -qq && apt-get install -y \
     build-essential \
     nodejs \
  && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler
-
-WORKDIR /tmp
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
+RUN mkdir /myapp
+WORKDIR /myapp
+ADD Gemfile /myapp/Gemfile
+ADD Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
+COPY . /myapp
 
-ENV APP_HOME /usr/src/app
-RUN mkdir -p $APP_HOME
-WORKDIR $APP_HOME
-ADD . $APP_HOME
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
 
 CMD ["rails", "s", "-b", "0.0.0.0"]

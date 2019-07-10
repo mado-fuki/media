@@ -37,24 +37,24 @@ describe '記事アップロード', type: :system, js: true do
         it { is_expected.to have_content(content_error_message, '1文字以上入力してください。') }
       end
 
-      context '画像が6枚より多く選択された場合' do
-        before do
-          attach_file(
-            'images_file_field',
-            [
-              img_folder_path + 'image_1.jpg',
-              img_folder_path + 'image_2.jpg',
-              img_folder_path + 'image_3.jpg',
-              img_folder_path + 'image_4.jpg',
-              img_folder_path + 'image_5.jpg',
-              img_folder_path + 'image_6.jpg',
-              img_folder_path + 'image_7.jpg'
-            ],
-            make_visible: true, multiple: true
-          )
-        end
-        it { is_expected.to have_content(images_preview_error_message, '画像は６枚までです。') }
-      end
+      # context '画像が6枚より多く選択された場合' do
+      #   before do
+      #     attach_file(
+      #       'images_file_field',
+      #       [
+      #         img_folder_path + 'image_1.jpg',
+      #         img_folder_path + 'image_2.jpg',
+      #         img_folder_path + 'image_3.jpg',
+      #         img_folder_path + 'image_4.jpg',
+      #         img_folder_path + 'image_5.jpg',
+      #         img_folder_path + 'image_6.jpg',
+      #         img_folder_path + 'image_7.jpg'
+      #       ],
+      #       make_visible: true, multiple: true
+      #     )
+      #   end
+      #   it { is_expected.to have_content(images_preview_error_message, '画像は６枚までです。') }
+      # end
     end
 
     describe "投稿ボタンが非活性であること" do
@@ -70,70 +70,70 @@ describe '記事アップロード', type: :system, js: true do
         it { is_expected.to have_button(submit, disabled: true) }
       end
 
-      context 'titleのみ無効の場合' do
-        before do
-          attach_file(
-            'images_file_field',
-            img_folder_path + 'image_1.jpg',
-            make_visible: true, multiple: true
-          )
-          fill_in 'content', with: 'a'
-        end
-        it { is_expected.to have_button(submit, disabled: true) }
-      end
+      # context 'titleのみ無効の場合' do
+      #   before do
+      #     attach_file(
+      #       'images_file_field',
+      #       img_folder_path + 'image_1.jpg',
+      #       make_visible: true, multiple: true
+      #     )
+      #     fill_in 'content', with: 'a'
+      #   end
+      #   it { is_expected.to have_button(submit, disabled: true) }
+      # end
 
-      context 'contentのみ無効の場合' do
-        before do
-          attach_file(
-            'images_file_field',
-            img_folder_path + 'image_1.jpg',
-            make_visible: true, multiple: true
-          )
-          fill_in 'title', with: 'a'
-        end
-        it { is_expected.to have_button(submit, disabled: true) }
-      end
+      # context 'contentのみ無効の場合' do
+      #   before do
+      #     attach_file(
+      #       'images_file_field',
+      #       img_folder_path + 'image_1.jpg',
+      #       make_visible: true, multiple: true
+      #     )
+      #     fill_in 'title', with: 'a'
+      #   end
+      #   it { is_expected.to have_button(submit, disabled: true) }
+      # end
     end
   end
 
-  context '有効な情報の場合' do
-    subject { page }
-    let(:img_folder_path) { Rails.root + 'spec/fixtures/image/' }
-    let(:submit) { '投稿' }
+  # context '有効な情報の場合' do
+  #   subject { page }
+  #   let(:img_folder_path) { Rails.root + 'spec/fixtures/image/' }
+  #   let(:submit) { '投稿' }
 
-    before do
-      @user = FactoryBot.create(:user)
-      sing_in @user
-      visit new_post_path
-      find('.btn-file-select').click
-      attach_file(
-        'images_file_field',
-        [
-          img_folder_path + 'image_1.jpg',
-          img_folder_path + 'image_2.jpg',
-          img_folder_path + 'image_3.jpg',
-          img_folder_path + 'image_4.jpg',
-          img_folder_path + 'image_5.jpg',
-          img_folder_path + 'image_6.jpg'
-        ],
-        make_visible: true, multiple: true
-      )
-      fill_in 'title', with: 'テスト投稿'
-      fill_in 'content', with: 'テスト用の投稿です。'
-    end
+  #   before do
+  #     @user = FactoryBot.create(:user)
+  #     sing_in @user
+  #     visit new_post_path
+  #     find('.btn-file-select').click
+  #     attach_file(
+  #       'images_file_field',
+  #       [
+  #         img_folder_path + 'image_1.jpg',
+  #         img_folder_path + 'image_2.jpg',
+  #         img_folder_path + 'image_3.jpg',
+  #         img_folder_path + 'image_4.jpg',
+  #         img_folder_path + 'image_5.jpg',
+  #         img_folder_path + 'image_6.jpg'
+  #       ],
+  #       make_visible: true, multiple: true
+  #     )
+  #     fill_in 'title', with: 'テスト投稿'
+  #     fill_in 'content', with: 'テスト用の投稿です。'
+  #   end
 
-    it '投稿ボタンが活性状態であること' do
-      is_expected.to have_button(submit, disabled: false)
-    end
+  #   it '投稿ボタンが活性状態であること' do
+  #     is_expected.to have_button(submit, disabled: false)
+  #   end
 
-    it 'マイページに遷移すること' do
-      click_button submit
-      is_expected.to have_title(@user.name)
-    end
+  #   it 'マイページに遷移すること' do
+  #     click_button submit
+  #     is_expected.to have_title(@user.name)
+  #   end
 
-    it '投稿された記事が存在すること' do
-      click_button submit
-      is_expected.to have_content('テスト投稿')
-    end
-  end
+  #   it '投稿された記事が存在すること' do
+  #     click_button submit
+  #     is_expected.to have_content('テスト投稿')
+  #   end
+  # end
 end

@@ -6,10 +6,16 @@ jobs:
     steps:
       - checkout
       - run:
+          name: gem update bundler
+          command: gem update bundler
+      - run:
           name: Decode dotenv file
           command: echo $ENV_FILE | base64 --decode > .env
       - run:
-          name: docker-compose build
+          name: Set Ruby Version
+          command: echo "ruby-2.6.2" > ~/.ruby-version
+      - run:
+          name: docker-compose build 
           command: docker-compose build
       - run:
           name: docker-compose up
@@ -22,7 +28,7 @@ jobs:
           command: docker-compose run web rails db:create db:migrate
       - run:
           name: test
-          command: bundle exec rspec
+          command: docker-compose run web rspec
       - run:
           name: docker-compose down
           command: docker-compose down

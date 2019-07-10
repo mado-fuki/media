@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
 gem 'rails', '5.2.2'
 gem 'bcrypt'
 gem 'puma'
@@ -28,9 +27,14 @@ gem 'rails-i18n'
 gem 'font-awesome-sass'
 gem 'counter_culture'
 gem 'config'
-gem 'dotenv-rails'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'capybara', '3.23.0'
+  gem 'database_cleaner'
+  gem 'webdrivers'
+  gem 'launchy'
   gem 'byebug', platform: :mri
   gem 'faker'
 end
@@ -44,12 +48,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '3.23.0'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'database_cleaner'
-  gem 'webdrivers'
-  gem 'launchy'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
