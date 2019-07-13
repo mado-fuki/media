@@ -9,6 +9,8 @@ CarrierWave.configure do |config|
   }
 
   config.cache_storage = :fog
+  config.fog_public = false
+  config.fog_authenticated_url_expiration = 60
   config.cache_dir = 'tmp/image-cache'
   config.fog_directory = ENV['config.fog_directory']
   config.asset_host = ENV['config.asset_host']
