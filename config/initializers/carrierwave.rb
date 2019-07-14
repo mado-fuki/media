@@ -6,8 +6,7 @@ CarrierWave.configure do |config|
     aws_secret_access_key: ENV['aws_secret_access_key'],
     region: ENV['region']
   }
-  config.cache_storage = :fog
-  config.cache_dir = 'tmp/image-cache'
+
   config.fog_directory = ENV['config.fog_directory']
   config.asset_host = ENV['config.asset_host']
 end
