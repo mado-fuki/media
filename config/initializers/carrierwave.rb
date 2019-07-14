@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     aws_access_key_id: ENV['aws_access_key_id'],
     aws_secret_access_key: ENV['aws_secret_access_key'],
     region: ENV['region'],
-    :path_style            => true
+    :path_style => true
   }
 
   config.cache_storage = :fog
