@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     env_file: .env
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${database_password}
       MYSQL_DATABASE: root
     ports:
       - '3306:3306'
