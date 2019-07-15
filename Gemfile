@@ -27,6 +27,7 @@ gem 'rails-i18n'
 gem 'font-awesome-sass'
 gem 'counter_culture'
 gem 'config'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails'
