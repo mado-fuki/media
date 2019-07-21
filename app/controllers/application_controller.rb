@@ -28,4 +28,12 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
+
+    def logged_in_user_ajax
+      unless logged_in?
+        store_location
+        flash[:danger] = 'ログインしてください。'
+        render :js => "window.location = '/login'"
+      end
+    end
 end
