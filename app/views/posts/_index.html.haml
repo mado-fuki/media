@@ -1,5 +1,8 @@
 %section.module
   .container
+    .search-word.mb-3
+      = get_search_tag
+      = get_search_word(@words)
     .row.multi-columns-row
       - @search_posts.each do |post|
         - if !post.images.blank?
