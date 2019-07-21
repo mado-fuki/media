@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :logged_in_user
+  before_action :logged_in_user_ajax
 
   def create
     @post = Post.find(params[:post_id])
