@@ -3,6 +3,7 @@ $cloud-gray: #d4d9df;
 $header-bg: #1a1a1a;
 $text-color-gray: #555;
 $btn-bule :#1e90ff;
+$font-black :#1a1a1a;
 
 /* navber */
 .navbar {
@@ -230,6 +231,11 @@ $btn-bule :#1e90ff;
 
 /* posts index */
 .post-index-title {
+  font-size: 18px;
+}
+
+.search-word {
+  color: $font-black;
   font-size: 18px;
 }
 
