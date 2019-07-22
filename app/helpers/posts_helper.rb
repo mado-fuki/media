@@ -9,13 +9,7 @@ module PostsHelper
     end
   end
 
-  # def get_search_tag
-  #   if request.fullpath.include?("/tags/")
-  #     "タグ検索: " + URI.decode(request.fullpath).sub("/tags/", "")
-  #   end
-  # end
-
-  def get_search_tag(search_tag_name)
+  def get_search_tag_name(search_tag_name)
     unless search_tag_name.blank?
       "タグ検索: " + search_tag_name
     end
