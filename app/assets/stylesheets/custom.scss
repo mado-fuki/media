@@ -4,6 +4,7 @@ $header-bg: #1a1a1a;
 $text-color-gray: #555;
 $btn-bule :#1e90ff;
 $font-black :#1a1a1a;
+$link-text-blue :#4753a2;
 
 /* navber */
 .navbar {
@@ -376,6 +377,10 @@ $font-black :#1a1a1a;
   font-size: 1rem;
 }
 
+.tag-area {
+  font-size: 16px;
+}
+
 .current-user-like-btn {
   background-color: #eb6ea0;
   color: $white;
@@ -477,6 +482,64 @@ $font-black :#1a1a1a;
 	color: #1a1a1a;
 }
 
+.comment-input-wrapper {
+  width: 82%;
+}
+
+.comment-head {
+  font-size: 22px !important;
+}
+
+@media screen and (max-width: 480px){
+  .comment-head {
+    margin: 20px 0 -12px 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .comment-input-wrapper {
+    width: 100%;
+  }
+}
+
+.comment-input {
+  background-color: #f5f5f5;
+  width: 100% !important;
+}
+
+.comment-user-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.comment-content {
+  font-size: 16px;
+}
+
+.comments-blank-text {
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 480px){
+  .comment-btn-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .comment-btn {
+    width: 100%;
+  }
+}
+
+.thumb-cercle_comment {
+  width: 80px !important;
+  height: 80px !important;
+}
+
 /* follow  */
   .follow-user-name {
     display: block;
@@ -538,9 +601,19 @@ $font-black :#1a1a1a;
   color: red;
 }
 
+.link_text {
+  font-size: 14px;
+  color :$link-text-blue !important;
+}
+
+.link_text_wrapper a{
+  color :$link-text-blue !important;
+}
+
 .border-red {
   border: solid red 1px;
 }
+
 
 /* titan-cancellation  */
 .user-name {

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :likes, only: [:create, :destroy]
   resources :password_resets, only: %i[new create edit update]
   resources :posts do
+    resources :comments, only: [:create, :destroy]
     member do
       get :edit_images
       patch :update_images

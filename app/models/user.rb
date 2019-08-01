@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships
   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
   attr_accessor :remember_token, :reset_token
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 12 }

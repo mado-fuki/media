@@ -6,7 +6,8 @@
           = @post.title
       .post-entry.mb-3
         = @post.content
-      = create_tag_link(@post)
+      .tag-area.link_text_wrapper.mb-1
+        = create_tag_link(@post)
   .col-sm-4.col-sm-offset-1
     %div{ class: 'like_form', id: "post-#{@post.id}", 'data-post-id' => "#{@post.id}" }
       = render 'likes/like', post: @post
@@ -34,3 +35,11 @@
       - else 
         %a.btn.btn-success.btn-circle.btn-block{href: login_url}
           フォローする
+  .col-sm-12
+    .comment-head
+      コメント
+    = render 'comments/form'
+    #comments-area
+      = render 'comments/index', comments: @comments
+
+    
