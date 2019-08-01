@@ -1,0 +1,19 @@
+- unless comments.blank?
+  - comments.reverse_each do |c|
+    .row.mb-4
+      .col-3.col-sm-1.col-md-2.col-lg-1
+        - if c.user.avatar?
+          %div{ style: "background-image: url(#{c.user.avatar.thumb.url})", class: 'thumb-cercle thumb-cercle_comment' }
+        -else
+          = render 'comments/no_image_avatar'
+      .col-9.col-sm-11.col-md-10.col-lg-11
+        .comment-user-name
+          %a{href: "/users/#{c.user.id}"}
+            = c.user.name
+        .comment-content
+          = c.content
+        - if c.user == current_user
+          = link_to '削除', post_comment_path(c.post_id, c.id), method: :delete, remote: true, class: 'link_text'
+- else
+  .comments-blank-text.mt-4.mb-4
+    まだコメントがありません
