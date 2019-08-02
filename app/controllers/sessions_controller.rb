@@ -18,4 +18,11 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to login_url
   end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = 'ログインしてください。'
+      redirect_to login_url
+    end
+  end
 end
