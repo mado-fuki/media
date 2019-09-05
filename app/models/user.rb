@@ -65,6 +65,7 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  # フィード情報を取得する
   def feed
     Post.where('user_id = ?', id)
   end
