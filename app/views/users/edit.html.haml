@@ -14,7 +14,7 @@
         = link_to 'アバター画像を編集', "/users/#{@user.id}/edit_avatar", class: "forgot-password"
     .annotation
       ユーザー名 12文字以下
-    = f.text_field :name, {class: 'form-control validate[required,maxSize[12]]', placeholder: 'ユーザー名', value: 'newユーザー' }
+    = f.text_field :name, {class: 'form-control validate[required,maxSize[12]]', placeholder: 'ユーザー名'}
     .mb-3
       %a.forgot-password{href: new_password_reset_path}
         パスワードの変更はこちら
