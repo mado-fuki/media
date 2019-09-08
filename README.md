@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーションの概要
+画像投稿をメインとしたSNSです。  
+一般的なWebサービスに必要な機能の学習を目的として作成しました。 
 
-Things you may want to cover:
+## 使用した技術
+  - 言語:　Ruby(バージョン2.6.2)  
+  - フレームワーク:　RubyOnRails(バージョン5.2.2)  
+  - データベース:　MySQL(バージョン5.7)  
+  - インフラ:　Heroku、Amazon S3、Amazon CloudFront、Docker、- - CircleCI  
+  - フロント:　Haml、Bootstrap、SCSS、JQuery  
+  - テスティングフレームワーク:　RSpec
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アプリケーションの機能一覧
+  - ログイン、ログアウト  
+  - 画像投稿  
+  - フォロー  
+  - コメント  
+  - いいね  
+  - キーワード検索  
+  - タグ検索  
+  - 記事ソート  
+  - ページング  
+  - 管理画面  
+  - 単体テスト  
+  - 統合テスト  
+  - 自動テスト  
+  - 自動デプロイ  
