@@ -8,7 +8,7 @@
   - 言語:　Ruby(バージョン2.6.2)  
   - フレームワーク:　RubyOnRails(バージョン5.2.2)  
   - データベース:　MySQL(バージョン5.7)  
-  - インフラ:　Heroku、Amazon S3、Amazon CloudFront、Docker、- - CircleCI  
+  - インフラ:　Heroku、Amazon S3、Amazon CloudFront、Docker、CircleCI  
   - フロント:　Haml、Bootstrap、SCSS、JQuery  
   - テスティングフレームワーク:　RSpec
 
